@@ -1,46 +1,3 @@
-# Software and Data for Annotating the Cascade Hop Dovetail Assembly
-
-## Repeat Annotation
-### *de novo* identification of long terminal retrotransposons (LTRs)
-<p>gt suffixerator (GenomeTools) 1.6.1</p>
-<p>gt ltrharvest (GenomeTools) 1.6.1</p>
-<p>LTR_FINDER_parallel v1.1</p>
-<p>LTR_retriever v2.7</p>
-
-### identification of non-LTR repeat sequences
-RepeatMasker version 4.1.0  
-Repeat library: mipsREdat_9.3p_Eudicot_TEs.fasta  
-<p><code>RepeatMasker -lib mipsREdat_9.3p_Eudicot_TEs.fasta -qq -pa 4 -cutoff 225 -norna -a -gff -dir outputDir/ Scaffold.fasta</code></p>
-
-## Alignments for Gene Prediction
-<p>megablast 2.2.26</p>
-blastx 2.10.0+
-exonerate version 2.3.0
-
-### EST data:
-*Humulus lupulus* ESTs from NCBI (25692 sequences, accessed 11/12/2018)
-*Humulus lupulus* ESTs from TrichOME (22959 sequences, accessed 03/28/2018)
-
-### Protein data:
-*Cannabis sativa* protein sequences from RefSeq (33639 sequences, accessed accessed 12/02/2020)
-*Prunus persica* protein sequences from Plaza (26843 sequences, accessed 10/13/2020)
-*Ziziphus jujuba* protein sequences from Plaza (28799 sequences, accessed 10/13/2020)
-UniProt Embryophyta protein sequences (38747 sequences, accessed 08/24/2020)
-
-## Gene Prediction
-BUSCO v4.1.1
-SNAP version 2006-07-28
-Augustus version 3.3.2
-MAKER 2.31.10
-
-### BUSCO is run in 'long' mode to train Augustus
-SGE_Batch -c "busco --in maskedGenomeAssembly.fasta --out outputDir --mode genome --config /path/busco_v4_config.ini --long" -r busco_v3_sge -q specified_queue -P 16
-
-### The masked assembly is directly provided to MAKER, and gene prediction proceeds in three rounds
-SGE_Batch -c "maker -RM_off" -r maker_round1_sge -q specified_queue  
-
-## Running the first round of MAKER
-<pre>
 #-----Genome (these are always required)
 genome=maskedGenomeAssembly.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
 organism_type=eukaryotic #eukaryotic or prokaryotic. Default is eukaryotic
@@ -98,11 +55,16 @@ cpus=1 #max number of cpus to use in BLAST and RepeatMasker (not for MPI, leave 
 max_dna_len=100000 #length for dividing up contigs into chunks (increases/decreases memory usage)
 min_contig=10000 #skip genome contigs below this length (under 10kb are often useless)
 
+# used this repo as a guide --> https://github.com/wuying1984/MAKER2_PM_genome_annotation
 pred_flank=200 #flank for extending evidence clusters sent to gene predictors
 pred_stats=0 #report AED and QI statistics for all predictions as well as models
 AED_threshold=1 #Maximum Annotation Edit Distance allowed (bound by 0 and 1)
+# "The tea plant reference genome and improved gene annotation using long-read and paired-end sequencing data" https://www.nature.com/articles/s41597-019-0127-1
 min_protein=0
+# min_protein=50 #require at least this many amino acids in predicted proteins
+# https://github.com/ptranvan/Genome-annotation
 alt_splice=0 #Take extra steps to try and find alternative splicing, 1 = yes, 0 = no
+# https://groups.google.com/g/maker-devel/c/tN-bxyC8IhQ, 'always_complete=1'
 always_complete=1 #extra steps to force start and stop codons, 1 = yes, 0 = no
 map_forward=0 #map names and attributes forward from old GFF3 genes, 1 = yes, 0 = no
 keep_preds=0 #Concordance threshold to add unsupported gene prediction (bound by 0 and 1)
@@ -110,6 +72,8 @@ keep_preds=0 #Concordance threshold to add unsupported gene prediction (bound by
 split_hit=10000 #length for the splitting of hits (expected max intron size for evidence alignments)
 single_exon=0 #consider single exon EST evidence when generating annotations, 1 = yes, 0 = no
 single_length=250 #min length required for single exon ESTs if 'single_exon is enabled'
+# "The tea plant reference genome and improved gene annotation using long-read and paired-end sequencing data" https://www.nature.com/articles/s41597-019-0127-1
+# when to set correct_est_fusion to 1 - not first round --> https://groups.google.com/g/maker-devel/c/J_ZLTFQ3xN4 // https://github.com/wuying1984/MAKER2_PM_genome_annotation // https://groups.google.com/g/maker-devel/c/tN-bxyC8IhQ
 correct_est_fusion=0
 # correct_est_fusion=1 #limits use of ESTs in annotation to avoid fusion genes
 
@@ -117,8 +81,3 @@ tries=2 #number of times to try a contig if there is a failure for some reason
 clean_try=0 #remove all data from previous run before retrying, 1 = yes, 0 = no
 clean_up=0 #removes theVoid directory with individual analysis files, 1 = yes, 0 = no
 TMP= #specify a directory other than the system default temporary directory for temporary files
-</pre>
-
-## Running the second round of MAKER
-<pre>
-</pre>
