@@ -39,7 +39,7 @@ SGE_Batch -c "busco --in maskedGenomeAssembly.fasta --out outputDir --mode genom
 ### The masked assembly is directly provided to MAKER, and gene prediction proceeds in three rounds
 SGE_Batch -c "maker -RM_off" -r maker_round1_sge -q specified_queue  
 
-## Running the first round of MAKER
+## First round of MAKER
 <pre>
 #-----Genome (these are always required)
 genome=maskedGenomeAssembly.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
@@ -119,7 +119,7 @@ clean_up=0 #removes theVoid directory with individual analysis files, 1 = yes, 0
 TMP= #specify a directory other than the system default temporary directory for temporary files
 </pre>
 
-## Running the second round of MAKER
+## Second round of MAKER
 <pre>
 #-----Genome (these are always required)
 genome=maskedGenomeAssembly.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
@@ -201,7 +201,7 @@ TMP= #specify a directory other than the system default temporary directory for 
 
 
 
-## Running the third round of MAKER
+## Third round of MAKER
 <pre>
 #-----Genome (these are always required)
 genome=maskedScaffold.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
