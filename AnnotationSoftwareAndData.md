@@ -148,6 +148,36 @@ TMP= #specify a directory other than the system default temporary directory for 
 </pre>
 </details>
 
+## First round of SNAP training
+<details>
+<summary>Commands</summary>
+### Create ZFF file  
+<pre>SGE_Batch -c "maker2zff -d maskedGenomeAssembly.maker.output/maskedGenomeAssembly_master_datastore_index.log" -r maker2zff_sge -q specified_queue</pre>  
+
+### fathom validate
+<pre>SGE_Batch -c "fathom genome.ann genome.dna -validate > snap_validate_output.txt" -r fathomeValidate_sge -q specified_queue</pre>  
+
+### grep for errors  
+<pre>cat snap_validate_output.txt | grep "error" > fathomValidateErrors.txt</pre>  
+
+### fathom categorize  
+"break up the sequences into fragments with one gene per sequence"  
+<https://vcru.wisc.edu/simonlab/bioinformatics/programs/snap/00README.txt>
+Why 1000? Seems to be standard practice; represents 1000 bp flanking gene  
+<https://www.biostars.org/p/217144/>  
+<https://reslp.github.io/blog/My-MAKER-Pipeline/>  
+<pre>SGE_Batch -c "fathom genome.ann genome.dna -categorize 1000" -r fathomCategorize_sge -q specified_queue</pre>  
+
+### fathom export
+<pre>SGE_Batch -c "fathom uni.ann uni.dna -export 1000 -plus" -r fathomExport_sge -q specified_queue</pre>  
+
+### forge  
+<pre>SGE_Batch -c "forge export.ann export.dna" -r forge_sge -q specified_queue</pre>  
+
+### Create hmm file for MAKER  
+<pre>/local/cluster/snap/hmm-assembler.pl maskedGenomeAssembly.fasta . > round1.hmm</pre>  
+</details>
+
 
 ## Second round of MAKER
 <details>
