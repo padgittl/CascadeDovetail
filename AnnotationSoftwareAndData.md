@@ -10,7 +10,7 @@ LTR_retriever v2.7
 ### identification of non-LTR repeat sequences
 RepeatMasker version 4.1.0
 Repeat library: mipsREdat_9.3p_Eudicot_TEs.fasta
-Example command: RepeatMasker -lib mipsREdat_9.3p_Eudicot_TEs.fasta -qq -pa 4 -cutoff 225 -norna -a -gff -dir outputDir/ Scaffold.fasta
+<code>RepeatMasker -lib mipsREdat_9.3p_Eudicot_TEs.fasta -qq -pa 4 -cutoff 225 -norna -a -gff -dir outputDir/ Scaffold.fasta</code>
 
 ## Alignments for Gene Prediction
 megablast 2.2.26 
