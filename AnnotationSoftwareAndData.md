@@ -3,17 +3,17 @@
 ## Repeat Annotation
 ### *de novo* identification of long terminal retrotransposons (LTRs)
 <p>gt suffixerator (GenomeTools) 1.6.1</p>
-gt ltrharvest (GenomeTools) 1.6.1 
-LTR_FINDER_parallel v1.1
-LTR_retriever v2.7
+<p>gt ltrharvest (GenomeTools) 1.6.1</p>
+<p>LTR_FINDER_parallel v1.1</p>
+<p>LTR_retriever v2.7</p>
 
 ### identification of non-LTR repeat sequences
-RepeatMasker version 4.1.0
-Repeat library: mipsREdat_9.3p_Eudicot_TEs.fasta
-<code>RepeatMasker -lib mipsREdat_9.3p_Eudicot_TEs.fasta -qq -pa 4 -cutoff 225 -norna -a -gff -dir outputDir/ Scaffold.fasta</code>
+RepeatMasker version 4.1.0  
+Repeat library: mipsREdat_9.3p_Eudicot_TEs.fasta  
+<p><code>RepeatMasker -lib mipsREdat_9.3p_Eudicot_TEs.fasta -qq -pa 4 -cutoff 225 -norna -a -gff -dir outputDir/ Scaffold.fasta</code></p>
 
 ## Alignments for Gene Prediction
-megablast 2.2.26 
+<p>megablast 2.2.26</p>
 blastx 2.10.0+
 exonerate version 2.3.0
 
