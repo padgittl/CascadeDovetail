@@ -2,44 +2,44 @@
 
 ## Repeat Annotation
 ### *de novo* identification of long terminal retrotransposons (LTRs)
-<p>gt suffixerator (GenomeTools) 1.6.1</p>
-<p>gt ltrharvest (GenomeTools) 1.6.1</p>
-<p>LTR_FINDER_parallel v1.1</p>
-<p>LTR_retriever v2.7</p>
+gt suffixerator (GenomeTools) 1.6.1  
+gt ltrharvest (GenomeTools) 1.6.1  
+LTR_FINDER_parallel v1.1  
+LTR_retriever v2.7  
 
 ### Identification of non-LTR repeat sequences
 RepeatMasker version 4.1.0  
 Repeat library: mipsREdat_9.3p_Eudicot_TEs.fasta  
-<p><code>RepeatMasker -lib mipsREdat_9.3p_Eudicot_TEs.fasta -qq -pa 4 -cutoff 225 -norna -a -gff -dir outputDir/ Scaffold.fasta</code></p>
+<code>RepeatMasker -lib mipsREdat_9.3p_Eudicot_TEs.fasta -qq -pa 4 -cutoff 225 -norna -a -gff -dir outputDir/ Scaffold.fasta</code>  
 
 ## Alignments for Gene Prediction
-<p>megablast 2.2.26</p>
-blastx 2.10.0+
-exonerate version 2.3.0
+megablast 2.2.26  
+blastx 2.10.0+  
+exonerate version 2.3.0  
 
-### EST data:
-*Humulus lupulus* ESTs from NCBI (25692 sequences, accessed 11/12/2018)
-*Humulus lupulus* ESTs from TrichOME (22959 sequences, accessed 03/28/2018)
+### EST data:  
+*Humulus lupulus* ESTs from NCBI (25692 sequences, accessed 11/12/2018)  
+*Humulus lupulus* ESTs from TrichOME (22959 sequences, accessed 03/28/2018)  
 
-### Protein data:
-*Cannabis sativa* protein sequences from RefSeq (33639 sequences, accessed accessed 12/02/2020)
-*Prunus persica* protein sequences from Plaza (26843 sequences, accessed 10/13/2020)
-*Ziziphus jujuba* protein sequences from Plaza (28799 sequences, accessed 10/13/2020)
-UniProt Embryophyta protein sequences (38747 sequences, accessed 08/24/2020)
+### Protein data:  
+*Cannabis sativa* protein sequences from RefSeq (33639 sequences, accessed accessed 12/02/2020)  
+*Prunus persica* protein sequences from Plaza (26843 sequences, accessed 10/13/2020)  
+*Ziziphus jujuba* protein sequences from Plaza (28799 sequences, accessed 10/13/2020)  
+UniProt Embryophyta protein sequences (38747 sequences, accessed 08/24/2020)  
 
-## Gene Prediction
-BUSCO v4.1.1
-SNAP version 2006-07-28
-Augustus version 3.3.2
-MAKER 2.31.10
+## Gene Prediction  
+BUSCO v4.1.1  
+SNAP version 2006-07-28  
+Augustus version 3.3.2  
+MAKER 2.31.10  
 
-### BUSCO is run in 'long' mode to train Augustus
-SGE_Batch -c "busco --in maskedGenomeAssembly.fasta --out outputDir --mode genome --config /path/busco_v4_config.ini --long" -r busco_v3_sge -q specified_queue -P 16
+### BUSCO is run in 'long' mode to train Augustus  
+<pre>SGE_Batch -c "busco --in maskedGenomeAssembly.fasta --out outputDir --mode genome --config /path/busco_v4_config.ini --long" -r busco_v3_sge -q specified_queue -P 16</pre>  
 
-### The masked assembly is directly provided to MAKER, and gene prediction proceeds in three rounds
-SGE_Batch -c "maker -RM_off" -r maker_round1_sge -q specified_queue  
+### The masked assembly is directly provided to MAKER, and gene prediction proceeds in three rounds  
+<pre>SGE_Batch -c "maker -RM_off" -r maker_round1_sge -q specified_queue</pre>  
 
-## First round of MAKER
+## First round of MAKER  
 <details>
 <summary>maker_opts.ctl</summary>
 
@@ -124,6 +124,9 @@ TMP= #specify a directory other than the system default temporary directory for 
 
 
 ## Second round of MAKER
+<details>
+<summary>maker_opts.ctl</summary>
+
 <pre>
 #-----Genome (these are always required)
 genome=maskedGenomeAssembly.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
@@ -200,11 +203,14 @@ tries=2 #number of times to try a contig if there is a failure for some reason
 clean_try=0 #remove all data from previous run before retrying, 1 = yes, 0 = no
 clean_up=0 #removes theVoid directory with individual analysis files, 1 = yes, 0 = no
 TMP= #specify a directory other than the system default temporary directory for temporary files
-</pre>  
-
+</pre>
+</details>  
 
 
 ## Third round of MAKER
+<details>
+<summary>maker_opts.ctl</summary>
+
 <pre>
 #-----Genome (these are always required)
 genome=maskedScaffold.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
@@ -281,5 +287,5 @@ clean_try=0 #remove all data from previous run before retrying, 1 = yes, 0 = no
 clean_up=0 #removes theVoid directory with individual analysis files, 1 = yes, 0 = no
 TMP= #specify a directory other than the system default temporary directory for temporary file
 </pre>
-
+</details>
 
