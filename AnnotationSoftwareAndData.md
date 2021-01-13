@@ -151,6 +151,7 @@ TMP= #specify a directory other than the system default temporary directory for 
 ## First round of SNAP training
 <details>
 <summary>Commands</summary>
+
 ### Create ZFF file  
 <pre>SGE_Batch -c "maker2zff -d maskedGenomeAssembly.maker.output/maskedGenomeAssembly_master_datastore_index.log" -r maker2zff_sge -q specified_queue</pre>  
 
@@ -162,7 +163,7 @@ TMP= #specify a directory other than the system default temporary directory for 
 
 ### fathom categorize  
 "break up the sequences into fragments with one gene per sequence"  
-<https://vcru.wisc.edu/simonlab/bioinformatics/programs/snap/00README.txt>
+<https://vcru.wisc.edu/simonlab/bioinformatics/programs/snap/00README.txt>  
 Why 1000? Seems to be standard practice; represents 1000 bp flanking gene  
 <https://www.biostars.org/p/217144/>  
 <https://reslp.github.io/blog/My-MAKER-Pipeline/>  
