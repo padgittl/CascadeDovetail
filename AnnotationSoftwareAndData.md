@@ -40,8 +40,9 @@ MAKER 2.31.10
 <pre>SGE_Batch -c "maker -RM_off" -r maker_round1_sge -q specified_queue</pre>  
 
 
+### Web resources for guiding selection of MAKER parameters  
 <details>
-<summary>Web resources for guiding selection of MAKER parameters</summary>
+<summary>Resources</summary>
 
 ### Control files explained:  
 <http://weatherby.genetics.utah.edu/MAKER/wiki/index.php/The_MAKER_control_files_explained>
