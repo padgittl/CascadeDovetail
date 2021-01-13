@@ -39,7 +39,7 @@ MAKER 2.31.10
 ### The masked assembly is directly provided to MAKER, and gene prediction proceeds in three rounds  
 <pre>SGE_Batch -c "maker -RM_off" -r maker_round1_sge -q specified_queue</pre>  
 
-## First round of MAKER  
+
 <details>
 <summary>Web resources for guiding selection of MAKER parameters</summary>
 
@@ -62,6 +62,7 @@ MAKER 2.31.10
 </details>
 
 
+## First round of MAKER
 <details>
 <summary>maker_opts.ctl</summary>
 
