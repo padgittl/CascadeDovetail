@@ -15,7 +15,6 @@ other_pass=0 #passthrough anyything else in maker_gff: 1 = yes, 0 = no
 #-----EST Evidence (for best results provide a file for at least one)
 est= #set of ESTs or assembled mRNA-seq in fasta format
 altest= #EST/cDNA sequence file in fasta format from an alternate organism
-# hop ests
 est_gff=allScaffolds_vs_ncbiESTs.modified.exonerate,allScaffolds_vs_trichomeESTs.modified.exonerate,hopCascadeDovetailMaskedStringtieTranscriptsHenning.gff3,hopCascadeDovetailMaskedStringtieTranscriptsMatthews.gff3 # aligned ESTs or mRNA-seq from an external GFF3 file
 altest_gff= #aligned ESTs from a closly relate species in GFF3 format
 
