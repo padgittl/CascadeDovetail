@@ -56,8 +56,9 @@ MAKER 2.31.10
 <https://robertslab.github.io/sams-notebook/2019/01/14/Annotation-Olurida_v081-MAKER-BUSCO-Augustus-Training.html>  
 <https://gist.github.com/darencard/bb1001ac1532dd4225b030cf0cd61ce2>  
 
-### "Generally there is little further improvement after 2 rounds of bootstrap training with the same evidence, and you run the risk of overtraining"    
-<https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4286374/>
+### "Generally there is little further improvement after 2 rounds of bootstrap training with the same evidence, and you run the risk of overtraining"      
+"Genome Annotation and Curation Using MAKER and MAKER-P"  
+<https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4286374/>  
 
 ### Reference for training Augustus via BUSCO  
 "Improving Illumina assemblies with Hi‐C and long reads: An example with the North African dromedary" <https://onlinelibrary.wiley.com/doi/full/10.1111/1755-0998.13020>  
