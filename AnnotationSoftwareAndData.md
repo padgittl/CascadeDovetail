@@ -2,7 +2,7 @@
 
 ## Repeat Annotation
 ### *de novo* identification of long terminal retrotransposons (LTRs)
-gt suffixerator (GenomeTools) 1.6.1 
+<p>gt suffixerator (GenomeTools) 1.6.1</p>
 gt ltrharvest (GenomeTools) 1.6.1 
 LTR_FINDER_parallel v1.1
 LTR_retriever v2.7
