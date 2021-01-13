@@ -7,7 +7,7 @@
 <p>LTR_FINDER_parallel v1.1</p>
 <p>LTR_retriever v2.7</p>
 
-### identification of non-LTR repeat sequences
+### Identification of non-LTR repeat sequences
 RepeatMasker version 4.1.0  
 Repeat library: mipsREdat_9.3p_Eudicot_TEs.fasta  
 <p><code>RepeatMasker -lib mipsREdat_9.3p_Eudicot_TEs.fasta -qq -pa 4 -cutoff 225 -norna -a -gff -dir outputDir/ Scaffold.fasta</code></p>
@@ -40,6 +40,7 @@ SGE_Batch -c "busco --in maskedGenomeAssembly.fasta --out outputDir --mode genom
 SGE_Batch -c "maker -RM_off" -r maker_round1_sge -q specified_queue  
 
 ## First round of MAKER
+<details>
 <pre>
 #-----Genome (these are always required)
 genome=maskedGenomeAssembly.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
@@ -118,6 +119,7 @@ clean_try=0 #remove all data from previous run before retrying, 1 = yes, 0 = no
 clean_up=0 #removes theVoid directory with individual analysis files, 1 = yes, 0 = no
 TMP= #specify a directory other than the system default temporary directory for temporary files
 </pre>
+</details>
 
 ## Second round of MAKER
 <pre>
