@@ -41,6 +41,28 @@ MAKER 2.31.10
 
 ## First round of MAKER  
 <details>
+<summary>Web resources for guiding selection of MAKER parameters</summary>
+
+### Control files explained:  
+<http://weatherby.genetics.utah.edu/MAKER/wiki/index.php/The_MAKER_control_files_explained>
+### Training SNAP twice  
+<https://biohpc.cornell.edu/doc/annotation_2019_exercises1.html>  
+<https://robertslab.github.io/sams-notebook/2018/11/27/Annotation-Olurida_v081-MAKER-on-Mox.html>  
+<https://robertslab.github.io/sams-notebook/2019/01/14/Annotation-Olurida_v081-MAKER-BUSCO-Augustus-Training.html>  
+<https://gist.github.com/darencard/bb1001ac1532dd4225b030cf0cd61ce2>  
+
+### "Generally there is little further improvement after 2 rounds of bootstrap training with the same evidence, and you run the risk of overtraining"    
+<https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4286374/>
+
+# Resource on MAKER forum  
+<https://groups.google.com/g/maker-devel?pli=1>  
+
+### Reference for training Augustus via BUSCO  
+"Improving Illumina assemblies with Hi‐C and long reads: An example with the North African dromedary" <https://onlinelibrary.wiley.com/doi/full/10.1111/1755-0998.13020>  
+</details>
+
+
+<details>
 <summary>maker_opts.ctl</summary>
 
 <pre>
