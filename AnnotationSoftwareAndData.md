@@ -289,7 +289,7 @@ forge</pre>
 
 ### Create hmm file for MAKER  
 <pre>/local/cluster/snap/hmm-assembler.pl maskedGenomeAssembly.fasta . > round2.hmm</pre>  
-<details/>
+</details/>
 
 
 ## Third round of MAKER
