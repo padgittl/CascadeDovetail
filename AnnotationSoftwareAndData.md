@@ -296,8 +296,7 @@ TMP= #specify a directory other than the system default temporary directory for 
 <pre>SGE_Batch -c "fathom genome.ann genome.dna -categorize 1000" -r fathomCategorize_sge -q specified_queue</pre>  
 
 ### fathom export  
-<pre>SGE_Batch -c "fathom uni.ann uni.dna -export 1000 -plus" -r fathomExport_sge -q specified_queue
-forge</pre>  
+<pre>SGE_Batch -c "fathom uni.ann uni.dna -export 1000 -plus" -r fathomExport_sge -q specified_queue</pre>  
 
 ### forge  
 <pre>SGE_Batch -c "forge export.ann export.dna" -r forge_sge -q specified_queue</pre>  
