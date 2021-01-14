@@ -27,7 +27,7 @@ exonerate version 2.3.0
 *Ziziphus jujuba* protein sequences from Plaza (28799 sequences, accessed 10/13/2020)  
 UniProt Embryophyta protein sequences (38747 sequences, accessed 08/24/2020)  
 
-### RNA-seq transcript assembly of leaf, meristem, and stem tissues from hop  
+### RNA-seq merged transcript assembly of leaf, meristem, and stem tissues from hop  
 hisat2 version 2.2.0  
 StringTie v1.3.3b  
 cuffmerge 2011-03-17  
