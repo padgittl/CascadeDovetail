@@ -283,7 +283,7 @@ TMP= #specify a directory other than the system default temporary directory for 
 <details>  
 <summary>Commands</summary>  
 
-### Create ZFF file
+### create ZFF file
 <pre>SGE_Batch -c "maker2zff -d maskedGenomeAssembly.maker.output/maskedGenomeAssembly_master_datastore_index.log" -r maker2zff_sge -q specified_queue</pre>  
 
 ### fathom validate
@@ -302,7 +302,7 @@ forge</pre>
 ### forge  
 <pre>SGE_Batch -c "forge export.ann export.dna" -r forge_sge -q specified_queue</pre>  
 
-### Create hmm file for MAKER  
+### create hmm file for MAKER  
 <pre>/local/cluster/snap/hmm-assembler.pl maskedGenomeAssembly.fasta . > round2.hmm</pre>  
 </details/>
 
