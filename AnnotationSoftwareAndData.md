@@ -303,7 +303,7 @@ TMP= #specify a directory other than the system default temporary directory for 
 <pre>/local/cluster/snap/hmm-assembler.pl maskedGenomeAssembly.fasta . > round2.hmm</pre>  
 </details/>
 
-## Copy Augustus training config files from BUSCO to home directory  
+## Copy Augustus training config files from BUSCO output directory to home directory  
 <pre>cp -r hopCascadeMaskedDovetail/run_embryophyta_odb10/augustus_output/retraining_parameters/BUSCO_hopCascadeMaskedDovetail/ /home_directory/augustus-3.3.2/config/species/.</pre>  
 
 ## Set environment for Augustus 
