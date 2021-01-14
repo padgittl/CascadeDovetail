@@ -1,6 +1,6 @@
 # Pipeline for Annotating the Cascade Hop Dovetail Assembly
 
-## Repeat Annotation
+# Repeat Annotation
 ### *de novo* identification of long terminal retrotransposons (LTRs)
 gt suffixerator (GenomeTools) 1.6.1  
 gt ltrharvest (GenomeTools) 1.6.1  
@@ -12,7 +12,7 @@ RepeatMasker version 4.1.0
 Repeat library: [mipsREdat_9.3p_Eudicot_TEs.fasta](https://www.mmnt.net/db/0/0/ftp.mips.embnet.org/plants/REdat)  
 <code>RepeatMasker -lib mipsREdat_9.3p_Eudicot_TEs.fasta -qq -pa 4 -cutoff 225 -norna -a -gff -dir outputDir/ Scaffold.fasta</code>  
 
-## Alignments for Gene Prediction
+# Alignments for Gene Prediction
 megablast 2.2.26  
 blastx 2.10.0+  
 exonerate version 2.3.0  
@@ -27,7 +27,7 @@ exonerate version 2.3.0
 *Ziziphus jujuba* protein sequences from Plaza (28799 sequences, accessed 10/13/2020)  
 UniProt Embryophyta protein sequences (38747 sequences, accessed 08/24/2020)  
 
-## Gene Prediction  
+# Gene Prediction  
 BUSCO v4.1.1  
 SNAP version 2006-07-28  
 Augustus version 3.3.2  
