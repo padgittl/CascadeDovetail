@@ -60,14 +60,13 @@ MAKER 2.31.10
 [Genome Annotation and Curation Using MAKER and MAKER-P](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4286374)  
 
 ### Reference for training Augustus via BUSCO  
-"Improving Illumina assemblies with Hi‐C and long reads: An example with the North African dromedary" <https://onlinelibrary.wiley.com/doi/full/10.1111/1755-0998.13020>  
+[Improving Illumina assemblies with Hi‐C and long reads: An example with the North African dromedary](https://onlinelibrary.wiley.com/doi/full/10.1111/1755-0998.13020)  
 
 ### Setting correct_est_fusion = 0 in the first round  
 <https://github.com/wuying1984/MAKER2_PM_genome_annotation>  
 
 ### Setting correct_est_fusion = 1  
-"The tea plant reference genome and improved gene annotation using long-read and paired-end sequencing data"  
-<https://www.nature.com/articles/s41597-019-0127-1>  
+[The tea plant reference genome and improved gene annotation using long-read and paired-end sequencing data](https://www.nature.com/articles/s41597-019-0127-1)    
 <https://github.com/ptranvan/Genome-annotation>  
 <https://groups.google.com/g/maker-devel/c/J_ZLTFQ3xN4>  
 <https://groups.google.com/g/maker-devel/c/tN-bxyC8IhQ>  
