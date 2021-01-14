@@ -1,4 +1,4 @@
-# Software and Data for Annotating the Cascade Hop Dovetail Assembly
+# Pipeline for Annotating the Cascade Hop Dovetail Assembly
 
 ## Repeat Annotation
 ### *de novo* identification of long terminal retrotransposons (LTRs)
@@ -303,6 +303,13 @@ TMP= #specify a directory other than the system default temporary directory for 
 <pre>/local/cluster/snap/hmm-assembler.pl maskedGenomeAssembly.fasta . > round2.hmm</pre>  
 </details/>
 
+## Set environment for Augustus 
+<pre>
+cp -r hopCascadeMaskedDovetail/run_embryophyta_odb10/augustus_output/retraining_parameters/BUSCO_hopCascadeMaskedDovetail/ /home_directory/augustus-3.3.2/config/species/.  
+export PATH="/local/cluster/augustus-3.3.2/bin:$PATH"  
+export PATH="/local/cluster/augustus-3.3.2/scripts:$PATH"  
+export AUGUSTUS_CONFIG_PATH="/home_directory/augustus-3.3.2/config/"  
+</pre>
 
 ## Third round of MAKER
 <details>
