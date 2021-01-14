@@ -36,7 +36,7 @@ MAKER 2.31.10
 ### BUSCO is run in 'long' mode to train Augustus  
 <pre>SGE_Batch -c "busco --in maskedGenomeAssembly.fasta --out hopCascadeMaskedDovetail --mode genome --config /path/busco_v4_config.ini --long" -r busco_v3_sge -q specified_queue -P 16</pre>  
 
-### The masked assembly is directly provided to MAKER, and gene prediction proceeds in three rounds  
+### The masked assembly is provided directly to MAKER, and gene prediction proceeds in three rounds  
 ## First round of MAKER  
 <pre>SGE_Batch -c "maker -RM_off" -r maker_round1_sge -q specified_queue</pre>  
 <details>
