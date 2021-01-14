@@ -9,7 +9,7 @@ LTR_retriever v2.7
 
 ### Identification of non-LTR repeat sequences
 RepeatMasker version 4.1.0  
-Repeat library: mipsREdat_9.3p_Eudicot_TEs.fasta  
+Repeat library: [mipsREdat_9.3p_Eudicot_TEs.fasta](https://www.mmnt.net/db/0/0/ftp.mips.embnet.org/plants/REdat)  
 <code>RepeatMasker -lib mipsREdat_9.3p_Eudicot_TEs.fasta -qq -pa 4 -cutoff 225 -norna -a -gff -dir outputDir/ Scaffold.fasta</code>  
 
 ## Alignments for Gene Prediction
@@ -19,7 +19,7 @@ exonerate version 2.3.0
 
 ### EST data:  
 *Humulus lupulus* ESTs from NCBI (25692 sequences, accessed 11/12/2018)  
-*Humulus lupulus* ESTs from TrichOME (22959 sequences, accessed 03/28/2018)  
+*Humulus lupulus* ESTs from [TrichOME](http://www.planttrichome.org/trichomedb/) (22959 sequences, accessed 03/28/2018)  
 
 ### Protein data:  
 *Cannabis sativa* protein sequences from RefSeq (33639 sequences, accessed accessed 12/02/2020)  
@@ -34,7 +34,7 @@ Augustus version 3.3.2
 MAKER 2.31.10  
 
 ### BUSCO is run in 'long' mode to train Augustus  
-<pre>SGE_Batch -c "busco --in maskedGenomeAssembly.fasta --out outputDir --mode genome --config /path/busco_v4_config.ini --long" -r busco_v3_sge -q specified_queue -P 16</pre>  
+<pre>SGE_Batch -c "busco --in maskedGenomeAssembly.fasta --out hopCascadeMaskedDovetail --mode genome --config /path/busco_v4_config.ini --long" -r busco_v3_sge -q specified_queue -P 16</pre>  
 
 ### The masked assembly is directly provided to MAKER, and gene prediction proceeds in three rounds  
 <pre>SGE_Batch -c "maker -RM_off" -r maker_round1_sge -q specified_queue</pre>  
@@ -303,9 +303,11 @@ TMP= #specify a directory other than the system default temporary directory for 
 <pre>/local/cluster/snap/hmm-assembler.pl maskedGenomeAssembly.fasta . > round2.hmm</pre>  
 </details/>
 
+## Copy Augustus training config files from BUSCO to home directory  
+<pre>cp -r hopCascadeMaskedDovetail/run_embryophyta_odb10/augustus_output/retraining_parameters/BUSCO_hopCascadeMaskedDovetail/ /home_directory/augustus-3.3.2/config/species/.</pre>  
+
 ## Set environment for Augustus 
 <pre>
-cp -r hopCascadeMaskedDovetail/run_embryophyta_odb10/augustus_output/retraining_parameters/BUSCO_hopCascadeMaskedDovetail/ /home_directory/augustus-3.3.2/config/species/.  
 export PATH="/local/cluster/augustus-3.3.2/bin:$PATH"  
 export PATH="/local/cluster/augustus-3.3.2/scripts:$PATH"  
 export AUGUSTUS_CONFIG_PATH="/home_directory/augustus-3.3.2/config/"  
