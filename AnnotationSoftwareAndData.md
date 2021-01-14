@@ -37,48 +37,8 @@ MAKER 2.31.10
 <pre>SGE_Batch -c "busco --in maskedGenomeAssembly.fasta --out hopCascadeMaskedDovetail --mode genome --config /path/busco_v4_config.ini --long" -r busco_v3_sge -q specified_queue -P 16</pre>  
 
 ### The masked assembly is directly provided to MAKER, and gene prediction proceeds in three rounds  
+## First round of MAKER  
 <pre>SGE_Batch -c "maker -RM_off" -r maker_round1_sge -q specified_queue</pre>  
-
-
-### Web resources for guiding selection of MAKER parameters  
-<details>
-<summary>Resources</summary>
-
-### MAKER forum on google
-<https://groups.google.com/g/maker-devel?pli=1>
-
-### Control files explained:  
-<http://weatherby.genetics.utah.edu/MAKER/wiki/index.php/The_MAKER_control_files_explained>
-
-### Training SNAP twice  
-<https://biohpc.cornell.edu/doc/annotation_2019_exercises1.html>  
-<https://robertslab.github.io/sams-notebook/2018/11/27/Annotation-Olurida_v081-MAKER-on-Mox.html>  
-<https://robertslab.github.io/sams-notebook/2019/01/14/Annotation-Olurida_v081-MAKER-BUSCO-Augustus-Training.html>  
-<https://gist.github.com/darencard/bb1001ac1532dd4225b030cf0cd61ce2>  
-
-### "Generally there is little further improvement after 2 rounds of bootstrap training with the same evidence, and you run the risk of overtraining"      
-[Genome Annotation and Curation Using MAKER and MAKER-P](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4286374)  
-
-### Reference for training Augustus via BUSCO  
-[Improving Illumina assemblies with Hi‐C and long reads: An example with the North African dromedary](https://onlinelibrary.wiley.com/doi/full/10.1111/1755-0998.13020)  
-
-### Setting correct_est_fusion = 0 in the first round  
-<https://github.com/wuying1984/MAKER2_PM_genome_annotation>  
-
-### Setting correct_est_fusion = 1  
-[The tea plant reference genome and improved gene annotation using long-read and paired-end sequencing data](https://www.nature.com/articles/s41597-019-0127-1)    
-<https://github.com/ptranvan/Genome-annotation>  
-<https://groups.google.com/g/maker-devel/c/J_ZLTFQ3xN4>  
-<https://groups.google.com/g/maker-devel/c/tN-bxyC8IhQ>  
-
-### Setting always_complete=1
-<https://groups.google.com/g/maker-devel/c/tN-bxyC8IhQ>  
-<https://github.com/wuying1984/MAKER2_PM_genome_annotation>  
-
-</details>
-
-
-## First round of MAKER
 <details>
 <summary>maker_opts.ctl</summary>
 
@@ -193,7 +153,8 @@ Why 1000? Seems to be standard practice; represents 1000 bp flanking gene
 </details>
 
 
-## Second round of MAKER
+## Second round of MAKER  
+<pre>SGE_Batch -c "maker -RM_off" -r maker_round2_sge -q specified_queue</pre>  
 <details>
 <summary>maker_opts.ctl</summary>
 
@@ -313,7 +274,8 @@ export PATH="/local/cluster/augustus-3.3.2/scripts:$PATH"
 export AUGUSTUS_CONFIG_PATH="/home_directory/augustus-3.3.2/config/"  
 </pre>
 
-## Third round of MAKER
+## Third round of MAKER  
+<pre>SGE_Batch -c "maker -RM_off" -r maker_round3_sge -q specified_queue</pre>  
 <details>
 <summary>maker_opts.ctl</summary>
 
@@ -393,5 +355,41 @@ clean_try=0 #remove all data from previous run before retrying, 1 = yes, 0 = no
 clean_up=0 #removes theVoid directory with individual analysis files, 1 = yes, 0 = no
 TMP= #specify a directory other than the system default temporary directory for temporary file
 </pre>
+</details>  
+
+### Web resources for guiding selection of MAKER parameters  
+<details>
+<summary>Resources</summary>
+
+### MAKER forum on google
+<https://groups.google.com/g/maker-devel?pli=1>
+
+### Control files explained:  
+<http://weatherby.genetics.utah.edu/MAKER/wiki/index.php/The_MAKER_control_files_explained>
+
+### Training SNAP twice  
+<https://biohpc.cornell.edu/doc/annotation_2019_exercises1.html>  
+<https://robertslab.github.io/sams-notebook/2018/11/27/Annotation-Olurida_v081-MAKER-on-Mox.html>  
+<https://robertslab.github.io/sams-notebook/2019/01/14/Annotation-Olurida_v081-MAKER-BUSCO-Augustus-Training.html>  
+<https://gist.github.com/darencard/bb1001ac1532dd4225b030cf0cd61ce2>  
+
+### "Generally there is little further improvement after 2 rounds of bootstrap training with the same evidence, and you run the risk of overtraining"      
+[Genome Annotation and Curation Using MAKER and MAKER-P](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4286374)  
+
+### Reference for training Augustus via BUSCO  
+[Improving Illumina assemblies with Hi‐C and long reads: An example with the North African dromedary](https://onlinelibrary.wiley.com/doi/full/10.1111/1755-0998.13020)  
+
+### Setting correct_est_fusion = 0 in the first round  
+<https://github.com/wuying1984/MAKER2_PM_genome_annotation>  
+
+### Setting correct_est_fusion = 1  
+[The tea plant reference genome and improved gene annotation using long-read and paired-end sequencing data](https://www.nature.com/articles/s41597-019-0127-1)    
+<https://github.com/ptranvan/Genome-annotation>  
+<https://groups.google.com/g/maker-devel/c/J_ZLTFQ3xN4>  
+<https://groups.google.com/g/maker-devel/c/tN-bxyC8IhQ>  
+
+### Setting always_complete=1
+<https://groups.google.com/g/maker-devel/c/tN-bxyC8IhQ>  
+<https://github.com/wuying1984/MAKER2_PM_genome_annotation>  
 </details>
 
