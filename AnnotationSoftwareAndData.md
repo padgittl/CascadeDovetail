@@ -12,7 +12,7 @@ RepeatMasker version 4.1.0
 Repeat library: [mipsREdat_9.3p_Eudicot_TEs.fasta](https://www.mmnt.net/db/0/0/ftp.mips.embnet.org/plants/REdat)  
 <code>RepeatMasker -lib mipsREdat_9.3p_Eudicot_TEs.fasta -qq -pa 4 -cutoff 225 -norna -a -gff -dir outputDir/ Scaffold.fasta</code>  
 
-# Alignments for Gene Prediction
+# Evidence for Gene Prediction
 megablast 2.2.26  
 blastx 2.10.0+  
 exonerate version 2.3.0  
@@ -26,6 +26,12 @@ exonerate version 2.3.0
 *Prunus persica* protein sequences from Plaza (26843 sequences, accessed 10/13/2020)  
 *Ziziphus jujuba* protein sequences from Plaza (28799 sequences, accessed 10/13/2020)  
 UniProt Embryophyta protein sequences (38747 sequences, accessed 08/24/2020)  
+
+### RNA-seq transcript assembly of leaf, meristem, and stem tissues from hop  
+hisat2 version 2.2.0  
+StringTie v1.3.3b  
+cuffmerge 2011-03-17  
+
 
 # Gene Prediction  
 BUSCO v4.1.1  
