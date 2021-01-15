@@ -24,18 +24,14 @@ exonerate version 2.3.0
 <details>
 <summary>Alignment commands</summary>
 
+<pre>SGE_Batch -c "megablast -i ScaffoldID.fasta -d estDB.fasta -o ScaffoldID_vs_estDB.txt -e 1e-3 -F F -m 8 -W 28" -r ScaffoldID_vs_estDB_sge -q specified_queue</pre>  
 <pre>
-SGE_Batch -c "megablast -i ScaffoldID.fasta -d estDB.fasta -o ScaffoldID_vs_estDB.txt -e 1e-3 -F F -m 8 -W 28" -r ScaffoldID_vs_estDB_sge -q specified_queue
-</pre>  
-<pre>
-# example for TrichOME EST database below
+# example for TrichOME EST database below  
 ls -1 Scaffold*_vs_estDB.txt > megablastFileList.txt  
 SGE_Batch -c "python scripts/prepFasta4Exonerate_TrichomeESTs.py estDB.fasta megablastFileList.txt" -r createFasta_sge -q specified_queue  
+# example output file from above script is ScaffoldID_vs_estDB.fasta  
 </pre>  
-<pre>
-# example output file from above script is ScaffoldID_vs_estDB.fasta
-SGE_Batch -c "/home_directory/exonerate-gff3/src/program/exonerate --model est2genome -q ScaffoldID_vs_estDB.fasta -t ScaffoldID.fasta --showvulgar no --showalignment no --showtargetgff yes --showcigar no -Q dna -T dna --forcegtag true --percent 70 --gff3 yes > ScaffoldID_vs_estDB.exonerate" -r ScaffoldID_vs_estDB_sge -q specified_queue
-</pre>  
+<pre>SGE_Batch -c "/home_directory/exonerate-gff3/src/program/exonerate --model est2genome -q ScaffoldID_vs_estDB.fasta -t ScaffoldID.fasta --showvulgar no --showalignment no --showtargetgff yes --showcigar no -Q dna -T dna --forcegtag true --percent 70 --gff3 yes > ScaffoldID_vs_estDB.exonerate" -r ScaffoldID_vs_estDB_sge -q specified_queue</pre>  
 </details>
 
 
@@ -51,7 +47,8 @@ UniProt Embryophyta protein sequences (38747 sequences, accessed 08/24/2020)
 <pre>SGE_Batch -c "blastx -query ScaffoldID.fasta -db proteinDB.fasta -out ScaffoldID_vs_proteinDB.txt -evalue 1e-3 -outfmt 6 -max_hsps 1" -r ScaffoldID_vs_proteinDB_sge -q specified_queue</pre>  
 <pre>
 ls -1 Scaffold*_vs_proteinDB.txt > blastxFileList.txt  
-SGE_Batch -c "python scripts/prepFasta4Exonerate_refSeqCSativa.py proteinDB.fasta blastxFileList.txt" -r createFasta_sge -q specified_queue</pre>  
+SGE_Batch -c "python scripts/prepFasta4Exonerate_refSeqCSativa.py proteinDB.fasta blastxFileList.txt" -r createFasta_sge -q specified_queue  
+# example output file from above script is ScaffoldID_vs_proteinDB.fasta</pre>  
 <pre>SGE_Batch -c "/home_directory/exonerate-gff3/src/program/exonerate --model protein2genome -q ScaffoldID_vs_proteinDB.fasta -t ScaffoldID.fasta --showvulgar no --showalignment no --showtargetgff yes --showcigar no -Q protein -T dna --forcegtag true --maxintron 100000 --gff3 yes > ScaffoldID_vs_proteinDB.exonerate" -r ScaffoldID_vs_proteinDB_sge -q specified_queue</pre>  
 </details>
 
