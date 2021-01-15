@@ -81,6 +81,14 @@ cuffmerge 2011-03-17
 
 ### assemble transcripts 
 <pre>SGE_Batch -c "stringtie leaf_vs_maskedGenomeAssembly.coord_sorted.bam -j 2 -o leaf_vs_maskedGenomeAssembly.coord_sorted.gtf --fr -A leaf_vs_maskedGenomeAssembly.coord_sorted.tab" -r stringtie_sge -q specified_queue</pre>  
+
+### merge tissue-specific assemblies
+<pre># maskedGenomeAssembly.txt contains paths to gtf files for each tissue-specific assembly  
+leaf_vs_maskedGenomeAssembly.coord_sorted.gtf  
+meristem_vs_maskedGenomeAssembly.coord_sorted.gtf  
+stem_vs_maskedGenomeAssembly.coord_sorted.gtf</pre>  
+<pre>SGE_Batch -c "cuffmerge -o maskedGenomeAssembly maskedGenomeAssembly.txt" -r cuffmerge_sge -q specified_queue</pre>
+
 </details>
 
 # Gene Prediction  
