@@ -50,6 +50,7 @@ UniProt Embryophyta protein sequences (38747 sequences, accessed 08/24/2020)
 <pre>SGE_Batch -c "blastx -query ScaffoldID.fasta -db proteinDB.fasta -out ScaffoldID_vs_proteinDB.txt -evalue 1e-3 -outfmt 6 -max_hsps 1" -r ScaffoldID_vs_proteinDB_sge -q specified_queue</pre>  
 ### create fasta file containing protein sequences to align to scaffold with exonerate  
 <pre>
+# example for *Cannabis sativa* protein database from RefSeq below
 ls -1 Scaffold*_vs_proteinDB.txt > blastxFileList.txt  
 SGE_Batch -c "python scripts/prepFasta4Exonerate_refSeqCSativa.py proteinDB.fasta blastxFileList.txt" -r createFasta_sge -q specified_queue  
 # example output file from above script is ScaffoldID_vs_proteinDB.fasta</pre>  
@@ -63,6 +64,24 @@ hisat2 version 2.2.0
 StringTie v1.3.3b  
 cuffmerge 2011-03-17  
 
+<details>
+<summary>Alignment and assembly commands</summary>
+
+### build genome index  
+<pre>SGE_Batch -c "hisat2-build maskedGenomeAssembly.fasta maskedGenomeAssembly" -r build_sge -q specified_queue</pre>  
+
+### align tissue-specific RNA-seq to masked assembly (leaf shown here)  
+<pre>SGE_Batch -c "hisat2 --rna-strandness FR --no-discordant --no-mixed --dta -x ../HISAT2_INDEXES/maskedGenomeAssembly -1 leaf_sample1_pair1.fastq,leaf_sample2_pair1.fastq -2 leaf_sample1_pair2.fastq,leaf_sample2_pair2.fastq -S leaf_vs_maskedGenomeAssembly.sam" -r hisat2_leaf_sge -q specified_queue</pre>  
+
+### sam to bam  
+<pre>SGE_Batch -c "samtools view leaf_vs_maskedGenomeAssembly.sam -bS -o leaf_vs_maskedGenomeAssembly.bam" -r sam2bam_sge -q specified_queue</pre>  
+
+### sort bam by coordinate  
+<pre>SGE_Batch -c "samtools sort leaf_vs_maskedGenomeAssembly.bam -o leaf_vs_maskedGenomeAssembly.coord_sorted.bam" -r sortBam_sge -q specified_queue</pre>  
+
+### assemble transcripts 
+<pre>SGE_Batch -c "stringtie leaf_vs_maskedGenomeAssembly.coord_sorted.bam -j 2 -o leaf_vs_maskedGenomeAssembly.coord_sorted.gtf --fr -A leaf_vs_maskedGenomeAssembly.coord_sorted.tab" -r stringtie_sge -q specified_queue</pre>  
+</details>
 
 # Gene Prediction  
 BUSCO v4.1.1  
