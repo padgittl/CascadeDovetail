@@ -46,7 +46,7 @@ UniProt Embryophyta protein sequences (38747 sequences, accessed 08/24/2020)
 <details>
 <summary>Alignment commands</summary>
 
-### megablast
+### blastx
 <pre>SGE_Batch -c "blastx -query ScaffoldID.fasta -db proteinDB.fasta -out ScaffoldID_vs_proteinDB.txt -evalue 1e-3 -outfmt 6 -max_hsps 1" -r ScaffoldID_vs_proteinDB_sge -q specified_queue</pre>  
 ### create fasta file containing protein sequences to align to scaffold with exonerate  
 <pre>
