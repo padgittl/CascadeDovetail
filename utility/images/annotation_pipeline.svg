@@ -14,9 +14,9 @@
    inkscape:version="1.0 (4035a4f, 2020-05-01)"
    id="svg8"
    version="1.1"
-   viewBox="0 0 258.38037 123.14199"
-   height="123.14199mm"
-   width="258.38037mm">
+   viewBox="0 0 220.4258 109.77637"
+   height="109.77637mm"
+   width="220.4258mm">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -29,8 +29,8 @@
      inkscape:document-rotation="0"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
-     inkscape:cy="280.56192"
-     inkscape:cx="593.8737"
+     inkscape:cy="268.44034"
+     inkscape:cx="571.64997"
      inkscape:zoom="0.49497475"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
@@ -51,7 +51,7 @@
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(8.6516247,-4.7118515)"
+     transform="translate(2.7715968,-7.9190198)"
      id="layer1"
      inkscape:groupmode="layer"
      inkscape:label="Layer 1">
@@ -61,62 +61,64 @@
        x="8.3154755"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.15;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
          y="25.702381"
          x="8.3154755"
          id="tspan833"
          sodipodi:role="line">Identify Repeats with a <tspan
    id="tspan863"
-   style="font-style:italic">de novo</tspan> pipeline </tspan><tspan
+   style="font-style:italic;font-size:9.17222px">de novo</tspan> pipeline </tspan><tspan
          id="tspan865"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
          y="38.169044"
          x="8.3154755"
-         sodipodi:role="line">and database of plant repeats </tspan></text>
+         sodipodi:role="line"><tspan
+   id="tspan943"
+   style="font-size:9.17222px">and database of plant repeats</tspan> </tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.15;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="8.6203651"
-       y="59.706245"
+       y="56.295464"
        id="text849"><tspan
          sodipodi:role="line"
          id="tspan847"
          x="8.6203651"
-         y="59.706245"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583">Assess assembly completeness and </tspan><tspan
+         y="56.295464"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583">Assess assembly completeness and </tspan><tspan
          id="tspan867"
          sodipodi:role="line"
          x="8.6203651"
-         y="72.172913"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583">train Augustus with BUSCO</tspan></text>
+         y="68.466255"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583">train Augustus with BUSCO</tspan></text>
     <text
        id="text853"
-       y="94.014999"
+       y="86.856911"
        x="8.2276258"
-       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       style="font-style:normal;font-weight:normal;font-size:9.17222px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
-         y="94.014999"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+         y="86.856911"
          x="8.2276258"
          id="tspan851"
          sodipodi:role="line">Generate alignment evidence for gene prediction</tspan></text>
     <text
        id="text861"
-       y="115.66071"
+       y="105.07738"
        x="7.8090482"
-       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       style="font-style:normal;font-weight:normal;font-size:9.17222px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
-         y="115.66071"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+         y="105.07738"
          x="7.8090482"
          id="tspan859"
          sodipodi:role="line">Run MAKER 3X</tspan></text>
     <rect
-       y="4.802072"
-       x="-8.5614042"
-       height="122.96155"
-       width="258.19992"
+       y="7.9976993"
+       x="-2.6929173"
+       height="109.61902"
+       width="220.26843"
        id="rect869"
-       style="fill:none;fill-opacity:0.980392;stroke:#000000;stroke-width:0.180441;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0.750236;stroke-opacity:1" />
+       style="fill:none;fill-opacity:0.980392;stroke:#000000;stroke-width:1.252;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0.750236;stroke-opacity:1" />
   </g>
 </svg>
