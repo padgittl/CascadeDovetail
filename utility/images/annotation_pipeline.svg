@@ -7,16 +7,16 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   inkscape:export-ydpi="600"
-   inkscape:export-xdpi="600"
+   inkscape:export-ydpi="245.83632"
+   inkscape:export-xdpi="245.83632"
    inkscape:export-filename="/Users/lillianpadgitt-cobb/Desktop/annotation_pipeline.png"
    sodipodi:docname="annotation_pipeline.svg"
    inkscape:version="1.0 (4035a4f, 2020-05-01)"
    id="svg8"
    version="1.1"
-   viewBox="0 0 258.18237 148.06732"
-   height="148.06732mm"
-   width="258.18237mm">
+   viewBox="0 0 258.38037 123.14199"
+   height="123.14199mm"
+   width="258.38037mm">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -29,8 +29,8 @@
      inkscape:document-rotation="0"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
-     inkscape:cy="280.18774"
-     inkscape:cx="593.49953"
+     inkscape:cy="280.56192"
+     inkscape:cx="593.8737"
      inkscape:zoom="0.49497475"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
@@ -51,7 +51,7 @@
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(8.5526247,-4.8108516)"
+     transform="translate(8.6516247,-4.7118515)"
      id="layer1"
      inkscape:groupmode="layer"
      inkscape:label="Layer 1">
@@ -77,57 +77,46 @@
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.15;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="8.6203651"
-       y="59.537388"
+       y="59.706245"
        id="text849"><tspan
          sodipodi:role="line"
          id="tspan847"
          x="8.6203651"
-         y="59.537388"
+         y="59.706245"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583">Assess assembly completeness and </tspan><tspan
          id="tspan867"
          sodipodi:role="line"
          x="8.6203651"
-         y="72.004051"
+         y="72.172913"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583">train Augustus with BUSCO</tspan></text>
     <text
        id="text853"
-       y="93.677284"
+       y="94.014999"
        x="8.2276258"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
-         y="93.677284"
+         y="94.014999"
          x="8.2276258"
          id="tspan851"
          sodipodi:role="line">Generate alignment evidence for gene prediction</tspan></text>
     <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="8.2276258"
-       y="115.35052"
-       id="text857"><tspan
-         sodipodi:role="line"
-         id="tspan855"
-         x="8.2276258"
-         y="115.35052"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583">Generate alignment evidence for gene prediction</tspan></text>
-    <text
        id="text861"
-       y="136.82738"
+       y="115.66071"
        x="7.8090482"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
-         y="136.82738"
+         y="115.66071"
          x="7.8090482"
          id="tspan859"
          sodipodi:role="line">Run MAKER 3X</tspan></text>
     <rect
-       y="4.8108516"
-       x="-8.5526247"
-       height="148.06732"
-       width="258.18237"
+       y="4.802072"
+       x="-8.5614042"
+       height="122.96155"
+       width="258.19992"
        id="rect869"
-       style="fill:none;fill-opacity:0.980392;stroke-width:0.198;stroke-miterlimit:10;stroke-dashoffset:0.750236;stroke:#000000;stroke-opacity:1;stroke-dasharray:none" />
+       style="fill:none;fill-opacity:0.980392;stroke:#000000;stroke-width:0.180441;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0.750236;stroke-opacity:1" />
   </g>
 </svg>
