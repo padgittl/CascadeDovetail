@@ -1,4 +1,6 @@
-# Pipeline for Annotating the Cascade Hop Dovetail Assembly
+# Pipeline for Annotating the Cascade Hop Dovetail Assembly  
+
+![alt text](../utility/images/annotation_pipeline.png)  
 
 # Repeat Annotation
 ### *de novo* identification of long terminal retrotransposons (LTRs)
