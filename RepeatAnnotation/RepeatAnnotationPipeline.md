@@ -1,6 +1,4 @@
-# Pipeline for annotating repeat in the Cascade Hop Dovetail Assembly  
-
-![alt text](../utility/images/annotation_pipeline.png)  
+# Pipeline for annotating repeats in the Cascade Hop Dovetail Assembly  
 
 # Repeat Annotation
 ### *de novo* identification of long terminal retrotransposons (LTRs)
@@ -14,6 +12,7 @@ LTR_FINDER_parallel v1.1
 <code>LTR_FINDER_parallel -seq ../index/scaffoldID.fasta -threads 4 -harvest_out</code>
 
 LTR_retriever v2.7
+
 <code>LTR_retriever -genome ../index/scaffoldID.fasta -inharvest ../ltrharvest/scaffoldID.ltrharvestScreen.out -infinder ../LTR_finder_parallel/scaffoldID.fasta.finder.combine.scn -threads 4 > scaffoldID.ltr_retriever.out</code>
 
 ### Identification of non-LTR repeat sequences
