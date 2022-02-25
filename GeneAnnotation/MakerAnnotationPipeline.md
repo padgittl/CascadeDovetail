@@ -433,6 +433,7 @@ TMP= #specify a directory other than the system default temporary directory for 
 <http://weatherby.genetics.utah.edu/MAKER/wiki/index.php/The_MAKER_control_files_explained>
 
 ### Training SNAP twice  
+<http://weatherby.genetics.utah.edu/MAKER/wiki/index.php/MAKER_Tutorial_for_GMOD_Online_Training_2014>  
 <https://biohpc.cornell.edu/doc/annotation_2019_exercises1.html>  
 <https://robertslab.github.io/sams-notebook/2018/11/27/Annotation-Olurida_v081-MAKER-on-Mox.html>  
 <https://robertslab.github.io/sams-notebook/2019/01/14/Annotation-Olurida_v081-MAKER-BUSCO-Augustus-Training.html>  
@@ -456,5 +457,8 @@ TMP= #specify a directory other than the system default temporary directory for 
 ### Setting always_complete=1
 <https://groups.google.com/g/maker-devel/c/tN-bxyC8IhQ>  
 <https://github.com/wuying1984/MAKER2_PM_genome_annotation>  
+
+### MAKER gene model naming scheme ("-RA")
+<https://cyverse.atlassian.net/wiki/spaces/TUT/pages/258736161/MAKER-3.0+with+Apollo+on+JetStream>  
 </details>
 
