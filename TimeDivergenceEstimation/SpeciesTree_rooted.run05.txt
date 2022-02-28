@@ -1,0 +1,2 @@
+8 1
+(vitis_vinifera,(prunus_persica,(ziziphus_jujuba,(morus_notabilis,((cannabis_sativa,humulus_lupulus)'>.05<.23',(trema_orientale,parasponia_andersonii))'>.53<.97')'>.79<1.17')'>.62<1.18')'>1.07<1.35');
