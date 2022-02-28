@@ -1,6 +1,6 @@
 # Pipeline for assigning putative gene functions in the Cascade Hop Dovetail Assembly 
 
-# Identify similarity to Pfam protein domains
+## Identify similarity to Pfam protein domains
 <details>
 <summary>Pfam command</summary>
 
@@ -10,11 +10,16 @@ HMMER 3.3
 
 <code>hmmscan --cpu 64 --domtblout combinedHopCascadeDovetail.domtblout Pfam-A.hmm geneModels.pep.fasta > combinedHopCascadeDovetail.err</code>
 
-<code>python assignPfam.py combinedHopCascadeDovetail.domtblout pfamRepeatDomains.txt geneModels.pep.fasta</code>
-
 </details>
 
-# Identify similarity to UniProt genes
+## Assign similarity to Pfam protein domains
+<details>
+<summary>Command</summary>
+<code>python assignPfam.py combinedHopCascadeDovetail.domtblout pfamRepeatDomains.txt geneModels.pep.fasta</code>
+</details>
+
+
+## Identify similarity to UniProt genes
 <details>
 <summary>UniProt commands</summary>
 
@@ -39,3 +44,5 @@ HMMER 3.3
 
 <code>blastp -query uniprot-reviewed_yes+taxonomy_3193.08242020.fasta -db blastDB/geneModels.pep.fasta -evalue 1e-3 -outfmt '6 std qcovs' -out uniprotPlants_vs_hop.blastp -num_threads 16</code>
 </details>
+
+
