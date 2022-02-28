@@ -1,6 +1,6 @@
           seed = -1
-       seqfile = /nfs0/BB/Hendrix_Lab/Hops/DovetailAnalysis/OrthoFinder/runDirs/minLength100aa/singleCopyOrthologAnalysis/transdecoderMakerCombined/concatenate/FDTvCodonThirdPos/allSpecies.thirdCodonPos.fa
-      treefile = ../../../../SpeciesTree_rooted.run05.txt
+       seqfile = allSpecies.thirdCodonPos.fa
+      treefile = SpeciesTree_rooted.run05.txt
        outfile = results.txt
 
          ndata = 1
