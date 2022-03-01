@@ -19,7 +19,7 @@ HMMER 3.3
 </details>
 
 
-## Identify similarity to UniProt genes
+## Identify similarity to UniProt genes with blastp
 <details>
 <summary>UniProt commands</summary>
 
@@ -40,24 +40,25 @@ HMMER 3.3
 <code>blastp -query uniprot_viruses.fasta -db blastDB/geneModels.pep.fasta -evalue 1e-3 -outfmt '6 std qcovs' -out viruses_vs_hop.blastp -num_threads 16</code>
 
 ### hop vs uniprot plant genes
-<code>blastp -query geneModels.pep.fasta -db uniprot-reviewed_yes+taxonomy_3193.08242020.fasta -evalue 1e-3 -outfmt '6 std qcovs' -out hop_vs_uniprotPlants.blastp -num_threads 16</code>
+<code>blastp -query geneModels.pep.fasta -db uniprotPlants.fasta -evalue 1e-3 -outfmt '6 std qcovs' -out hop_vs_uniprotPlants.blastp -num_threads 16</code>
 
-<code>blastp -query uniprot-reviewed_yes+taxonomy_3193.08242020.fasta -db blastDB/geneModels.pep.fasta -evalue 1e-3 -outfmt '6 std qcovs' -out uniprotPlants_vs_hop.blastp -num_threads 16</code>
+<code>blastp -query uniprotPlants.fasta -db blastDB/geneModels.pep.fasta -evalue 1e-3 -outfmt '6 std qcovs' -out uniprotPlants_vs_hop.blastp -num_threads 16</code>
 </details>
 
-## Identify similarity to UniProt plant genes
+## Assign similarity to UniProt plant genes
 <details>
 <summary>Command</summary>
-<code>python collectTopUniProtHits.py hop_vs_uniprotPlants.blastp uniprotPlants_vs_hop.blastp uniprot-reviewed_yes+taxonomy_3193.08242020.fasta uniprot_transposable_element_KW0814.fasta TEUniProtGenes.txt 20</code>
+<code>python collectTopUniProtHits.py hop_vs_uniprotPlants.blastp uniprotPlants_vs_hop.blastp uniprotPlants.fasta uniprot_transposable_element_KW0814.fasta TEUniProtGenes.txt 20</code>
 </details>
 
-## Identify similarity to other UniProt genes
+## Assign similarity to other UniProt genes
 <details>
 <summary>Command</summary>
-<code>python getOtherTopUniprotHit.py hop_vs_bacteria.blastp bacteria_vs_hop.blastp uniprot_bacteria.fasta Bacteria 30 hop</code>
+<code>python getOtherTopUniprotHit.py hop_vs_bacteria.blastp bacteria_vs_hop.blastp uniprot_bacteria.fasta Bacteria 30 hop</code>  
 
-<code>python getOtherTopUniprotHit.py hop_vs_uniprotTEs.blastp uniprotTEs_vs_hop.blastp uniprot_transposable_element_KW0814.fasta UniprotTE 30 hop</code>
 
-<code>python getOtherTopUniprotHit.py hop_vs_viruses.blastp viruses_vs_hop.blastp uniprot_viruses.fasta Virus 30 hop</code>
+<code>python getOtherTopUniprotHit.py hop_vs_uniprotTEs.blastp uniprotTEs_vs_hop.blastp uniprot_transposable_element_KW0814.fasta UniprotTE 30 hop</code>  
+
+<code>python getOtherTopUniprotHit.py hop_vs_viruses.blastp viruses_vs_hop.blastp uniprot_viruses.fasta Virus 30 hop</code>  
 
 </details>
