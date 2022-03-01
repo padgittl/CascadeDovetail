@@ -1,0 +1,12 @@
+sp|P0C2F6|RNHX1_ARATH	sp|P0C2F6|RNHX1_ARATH Putative ribonuclease H protein At1g65750 OS=Arabidopsis thaliana OX=3702 GN=At1g65750 PE=3 SV=1	
+sp|P31843|RRPO_OENBE	sp|P31843|RRPO_OENBE RNA-directed DNA polymerase homolog OS=Oenothera berteroana OX=3950 PE=4 SV=1	
+sp|Q9XEC1|Y4443_ARATH	sp|Q9XEC1|Y4443_ARATH Probable transposase-like protein At4g04430 OS=Arabidopsis thaliana OX=3702 GN=At4g04430 PE=3 SV=1	
+sp|P03010|TRAC9_MAIZE	sp|P03010|TRAC9_MAIZE Putative AC9 transposase OS=Zea mays OX=4577 PE=4 SV=1	
+sp|P08770|TRA1_MAIZE	sp|P08770|TRA1_MAIZE Putative AC transposase OS=Zea mays OX=4577 PE=2 SV=2	
+sp|P08771|YAC1_MAIZE	sp|P08771|YAC1_MAIZE Transposable element activator uncharacterized 12 kDa protein OS=Zea mays OX=4577 PE=4 SV=1	
+sp|P03936|YAC9_MAIZE	sp|P03936|YAC9_MAIZE Transposable element activator uncharacterized 23 kDa protein OS=Zea mays OX=4577 PE=4 SV=1	
+sp|P10978|POLX_TOBAC	sp|P10978|POLX_TOBAC Retrovirus-related Pol polyprotein from transposon TNT 1-94 OS=Nicotiana tabacum OX=4097 PE=2 SV=1	
+sp|Q94HW2|POLR1_ARATH	sp|Q94HW2|POLR1_ARATH Retrovirus-related Pol polyprotein from transposon RE1 OS=Arabidopsis thaliana OX=3702 GN=RE1 PE=2 SV=1	
+sp|Q9ZT94|POLR2_ARATH	sp|Q9ZT94|POLR2_ARATH Retrovirus-related Pol polyprotein from transposon RE2 OS=Arabidopsis thaliana OX=3702 GN=RE2 PE=4 SV=1	
+sp|P15718|POLB_MAIZE	sp|P15718|POLB_MAIZE Putative Pol polyprotein from transposon element Bs1 OS=Zea mays OX=4577 PE=4 SV=1	
+sp|P15268|MOSA_MAIZE	sp|P15268|MOSA_MAIZE Autonomous transposable element EN-1 mosaic protein OS=Zea mays OX=4577 PE=2 SV=1	
