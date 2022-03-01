@@ -54,11 +54,10 @@ HMMER 3.3
 ## Assign similarity to other UniProt genes
 <details>
 <summary>Command</summary>
-<code>python getOtherTopUniprotHit.py hop_vs_bacteria.blastp bacteria_vs_hop.blastp uniprot_bacteria.fasta Bacteria 30 hop</code>  
+<code>python getOtherTopUniprotHit.py hop_vs_bacteria.blastp bacteria_vs_hop.blastp uniprotBacteria.fasta Bacteria 30 hop</code>
 
+<code>python getOtherTopUniprotHit.py hop_vs_uniprotTEs.blastp uniprotTEs_vs_hop.blastp uniprotTEs.fasta UniprotTE 30 hop</code>
 
-<code>python getOtherTopUniprotHit.py hop_vs_uniprotTEs.blastp uniprotTEs_vs_hop.blastp uniprot_transposable_element_KW0814.fasta UniprotTE 30 hop</code>  
-
-<code>python getOtherTopUniprotHit.py hop_vs_viruses.blastp viruses_vs_hop.blastp uniprot_viruses.fasta Virus 30 hop</code>  
+<code>python getOtherTopUniprotHit.py hop_vs_viruses.blastp viruses_vs_hop.blastp uniprotViruses.fasta Virus 30 hop</code>  
 
 </details>
