@@ -1,1 +1,0 @@
-/nfs0/BB/Hendrix_Lab/Hops/DovetailAnalysis/OrthoFinder/runDirs/minLength100aa/singleCopyOrthologAnalysis/transdecoderMakerCombined/
