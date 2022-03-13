@@ -11,7 +11,7 @@
    inkscape:export-xdpi="245.83632"
    inkscape:export-filename="/Users/lillianpadgitt-cobb/Desktop/annotation_pipeline.png"
    sodipodi:docname="annotation_pipeline.svg"
-   inkscape:version="1.0 (4035a4f, 2020-05-01)"
+   inkscape:version="1.0.2 (e86c8708, 2021-01-15)"
    id="svg8"
    version="1.1"
    viewBox="0 0 220.4258 109.77637"
@@ -21,7 +21,7 @@
      id="defs2" />
   <sodipodi:namedview
      inkscape:window-maximized="0"
-     inkscape:window-y="23"
+     inkscape:window-y="25"
      inkscape:window-x="0"
      inkscape:window-height="667"
      inkscape:window-width="1252"
@@ -30,7 +30,7 @@
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
      inkscape:cy="268.44034"
-     inkscape:cx="571.64997"
+     inkscape:cx="182.74124"
      inkscape:zoom="0.49497475"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
@@ -46,7 +46,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -55,6 +55,13 @@
      id="layer1"
      inkscape:groupmode="layer"
      inkscape:label="Layer 1">
+    <rect
+       y="7.9976993"
+       x="-2.6929173"
+       height="109.61902"
+       width="220.26843"
+       id="rect869"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.252;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0.750236;stroke-opacity:1" />
     <text
        id="text835"
        y="25.702381"
@@ -113,12 +120,5 @@
          x="7.8090482"
          id="tspan859"
          sodipodi:role="line">Run MAKER 3X</tspan></text>
-    <rect
-       y="7.9976993"
-       x="-2.6929173"
-       height="109.61902"
-       width="220.26843"
-       id="rect869"
-       style="fill:none;fill-opacity:0.980392;stroke:#000000;stroke-width:1.252;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0.750236;stroke-opacity:1" />
   </g>
 </svg>
