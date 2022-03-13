@@ -14,7 +14,7 @@ Orthogroups.tsv and Orthogroups_SingleCopyOrthologues.txt are generated from Ort
 
 <code>java -jar macse_v2.03.jar -prog exportAlignment -align OG_NT.fasta -codonForFinalStop --- -codonForInternalStop +++ -codonForInternalFS +++ -charForRemainingFS + -out_NT OG_NT.expAlign.fasta -out_AA OG_AA.expAlign.fasta</code>
 
-## 3. Rename the defline with the geneID for each OG-specific fasta file to contain the species name
+## 3. Rename the geneID defline in each OG-specific fasta file to list the species name instead
 
 <code>ls -1 ../macse/exportAlignments/*_NT.expAlign.fasta > fastaFileList.txt</code>
 
