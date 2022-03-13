@@ -15,7 +15,7 @@ HMMER 3.3
 ## Assign similarity to Pfam protein domains
 <details>
 <summary>Command</summary>
-<code>python assignPfam.py combinedHopCascadeDovetail.domtblout pfamRepeatDomains.txt geneModels.pep.fasta</code>
+<code>python scripts/assignPfam.py combinedHopCascadeDovetail.domtblout pfamRepeatDomains.txt geneModels.pep.fasta</code>
 </details>
 
 
@@ -48,16 +48,16 @@ HMMER 3.3
 ## Assign similarity to UniProt plant genes
 <details>
 <summary>Command</summary>
-<code>python collectTopUniProtHits.py hop_vs_uniprotPlants.blastp uniprotPlants_vs_hop.blastp uniprotPlants.fasta uniprot_transposable_element_KW0814.fasta TEUniProtGenes.txt 20</code>
+<code>python scripts/collectTopUniProtHits.py hop_vs_uniprotPlants.blastp uniprotPlants_vs_hop.blastp uniprotPlants.fasta uniprot_transposable_element_KW0814.fasta TEUniProtGenes.txt 20</code>
 </details>
 
 ## Assign similarity to other UniProt genes
 <details>
 <summary>Command</summary>
-<code>python getOtherTopUniprotHit.py hop_vs_bacteria.blastp bacteria_vs_hop.blastp uniprotBacteria.fasta Bacteria 30 hop</code>
+<code>python scripts/getOtherTopUniprotHit.py hop_vs_bacteria.blastp bacteria_vs_hop.blastp uniprotBacteria.fasta Bacteria 30 hop</code>
 
-<code>python getOtherTopUniprotHit.py hop_vs_uniprotTEs.blastp uniprotTEs_vs_hop.blastp uniprotTEs.fasta UniprotTE 30 hop</code>
+<code>python scripts/getOtherTopUniprotHit.py hop_vs_uniprotTEs.blastp uniprotTEs_vs_hop.blastp uniprotTEs.fasta UniprotTE 30 hop</code>
 
-<code>python getOtherTopUniprotHit.py hop_vs_viruses.blastp viruses_vs_hop.blastp uniprotViruses.fasta Virus 30 hop</code>  
+<code>python scripts/getOtherTopUniprotHit.py hop_vs_viruses.blastp viruses_vs_hop.blastp uniprotViruses.fasta Virus 30 hop</code>  
 
 </details>
