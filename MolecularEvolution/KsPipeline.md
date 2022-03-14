@@ -1,9 +1,8 @@
 # create fasta file list
-ls -1 ../macse/exportAlignments/*_NT.fasta > fastaFileList.txt
-fastaFileList.txt.sh
+<pre>ls -1 ../macse/exportAlignments/*_NT.fasta > fastaFileList.txt</pre>
 
 # copy fresh control file
-cp ~/path/to/paml4.9j/yn00.ctl .
+<pre>cp ~/path/to/paml4.9j/yn00.ctl .</pre>
 
 # create "make_dirs.sh" file and create pair-specific control file for yn00
 python scripts/prep_yn00_config.py yn00.ctl fastaFileList.txt
