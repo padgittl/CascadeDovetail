@@ -20,8 +20,8 @@
 
 ### To create hopGenes.gff
 <pre>python scripts/createMCScanXInputFiles.py combinedGeneModels.txt hop.pep.fasta</pre>
-### combinedGeneModels.txt is a mapping file that contains information about the gene models
-### format: scaffoldID\toriginalGeneID\tnewGeneID\tgeneStart\tgeneStop\tcdsStart\tcdsStop\n
+<p>combinedGeneModels.txt is a mapping file that contains information about the gene models</p>
+<p>format: scaffoldID\toriginalGeneID\tnewGeneID\tgeneStart\tgeneStop\tcdsStart\tcdsStop\n</p>
 
 ### To create hop.chr
 <pre>less hopGenes.gff | awk '{print $1 "\thop"}' | sort | uniq > hop.chr</pre>
