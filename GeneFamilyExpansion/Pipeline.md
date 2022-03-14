@@ -9,20 +9,33 @@
 </details>
 
 ## Run Cafe
-<p>The dates in the tree are derived from the Bayesian time tree</p>
 <pre>run_cafe.sh</pre>
+<p>The dates in the tree are derived from the Bayesian time tree</p>
 
 ## Create summary files
 <pre>mkdir reports</pre>
 <pre>python cafetutorial_report_analysis.py -i resultfile.cafe -o reports/summary_run1 -r 0</pre>
 
 ## Create tree figures for families undergoing rapid evolution, expansions, and contractions
-<p>In the shell script createTrees.sh, cafetutorial_draw_tree.v2.py is modified from the original Cafe version to output svg and pdf tree files</p>
 <pre>./createTrees.sh</pre>
+<p>In the shell script createTrees.sh, cafetutorial_draw_tree.v2.py is modified from the original Cafe version to output svg and pdf tree files</p>
+
 
 <details>
 <summary>Perform hypergeometric test to assess GO term functional enrichment</summary>
 <details>
+
+<summary>Biological Processes</summary>
+<pre>python scripts/hypergeometric_10LargestScaffolds.py orthogroupCountFile.cafe.filtered.tsv Orthogroups.tsv reports/summary_run1_fams.txt annotationFiles/hop.tsv annotationFiles/cannabis.tsv annotationFiles/mulberry.tsv annotationFiles/parasponia.tsv annotationFiles/peach.tsv annotationFiles/trema.tsv annotationFiles/vitis.tsv annotationFiles/ziziphus.tsv tenLargestScaffoldLengths.txt combinedGeneModels.txt uniprot-reviewed_yes+taxonomy_3193.allGOTerms.08242020.tab uniprot-reviewed_yes+taxonomy_3193.biologicalProcesses.08242020.tab biologicalProcesses</pre></details>
+
+<details>
+<summary>Cellular Components</summary>
+<pre>python scripts/hypergeometric_10LargestScaffolds.py orthogroupCountFile.cafe.filtered.tsv Orthogroups.tsv reports/summary_run1_fams.txt annotationFiles/hop.tsv annotationFiles/cannabis.tsv annotationFiles/mulberry.tsv annotationFiles/parasponia.tsv annotationFiles/peach.tsv annotationFiles/trema.tsv annotationFiles/vitis.tsv annotationFiles/ziziphus.tsv tenLargestScaffoldLengths.txt combinedGeneModels.txt uniprot-reviewed_yes+taxonomy_3193.allGOTerms.08242020.tab uniprot-reviewed_yes+taxonomy_3193.cellularComponents.08242020.tab cellularComponent</pre></details>
+
+<details>
+<summary>Molecular Function</summary>
+<pre>python scripts/hypergeometric_10LargestScaffolds.py orthogroupCountFile.cafe.filtered.tsv Orthogroups.tsv reports/summary_run1_fams.txt annotationFiles/hop.tsv annotationFiles/cannabis.tsv annotationFiles/mulberry.tsv annotationFiles/parasponia.tsv annotationFiles/peach.tsv annotationFiles/trema.tsv annotationFiles/vitis.tsv annotationFiles/ziziphus.tsv tenLargestScaffoldLengths.txt combinedGeneModels.txt uniprot-reviewed_yes+taxonomy_3193.allGOTerms.08242020.tab uniprot-reviewed_yes+taxonomy_3193.molecularFunction.08242020.tab molecularFunction</pre></details>
+
 <p>Annotation files are generated for each species and contain both Pfam and UniProt similarity</p>
 <pre>geneID\thitSource\thitID\thitDescription\n</pre>
 <pre>HUMLU_CAS0073067.t1.p1  uniprotPlantNonRepeat   Q9FX89  sp|Q9FX89|FB50_ARATH Putative F-box protein At1g49610 OS=Arabidopsis thaliana OX=3702 GN=At1g49610 PE=4 SV=2</pre>
@@ -50,15 +63,5 @@ Scaffold_1531   MSTRG.1239.1.p1 HUMLU_CAS0000006.t1.p1  50767   52290   51380   
 </pre>
 </details>
 
-<summary>Biological Processes</summary>
-<pre>python scripts/hypergeometric_10LargestScaffolds.py orthogroupCountFile.cafe.filtered.tsv Orthogroups.tsv reports/summary_run1_fams.txt annotationFiles/hop.tsv annotationFiles/cannabis.tsv annotationFiles/mulberry.tsv annotationFiles/parasponia.tsv annotationFiles/peach.tsv annotationFiles/trema.tsv annotationFiles/vitis.tsv annotationFiles/ziziphus.tsv tenLargestScaffoldLengths.txt combinedGeneModels.txt uniprot-reviewed_yes+taxonomy_3193.allGOTerms.08242020.tab uniprot-reviewed_yes+taxonomy_3193.biologicalProcesses.08242020.tab biologicalProcesses</pre></details>
-
-<details>
-<summary>Cellular Components</summary>
-<pre>python scripts/hypergeometric_10LargestScaffolds.py orthogroupCountFile.cafe.filtered.tsv Orthogroups.tsv reports/summary_run1_fams.txt annotationFiles/hop.tsv annotationFiles/cannabis.tsv annotationFiles/mulberry.tsv annotationFiles/parasponia.tsv annotationFiles/peach.tsv annotationFiles/trema.tsv annotationFiles/vitis.tsv annotationFiles/ziziphus.tsv tenLargestScaffoldLengths.txt combinedGeneModels.txt uniprot-reviewed_yes+taxonomy_3193.allGOTerms.08242020.tab uniprot-reviewed_yes+taxonomy_3193.cellularComponents.08242020.tab cellularComponent</pre></details>
-
-<details>
-<summary>Molecular Function</summary>
-<pre>python scripts/hypergeometric_10LargestScaffolds.py orthogroupCountFile.cafe.filtered.tsv Orthogroups.tsv reports/summary_run1_fams.txt annotationFiles/hop.tsv annotationFiles/cannabis.tsv annotationFiles/mulberry.tsv annotationFiles/parasponia.tsv annotationFiles/peach.tsv annotationFiles/trema.tsv annotationFiles/vitis.tsv annotationFiles/ziziphus.tsv tenLargestScaffoldLengths.txt combinedGeneModels.txt uniprot-reviewed_yes+taxonomy_3193.allGOTerms.08242020.tab uniprot-reviewed_yes+taxonomy_3193.molecularFunction.08242020.tab molecularFunction</pre></details>
 </details>
 
