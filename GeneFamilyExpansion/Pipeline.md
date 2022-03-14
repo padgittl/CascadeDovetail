@@ -10,7 +10,7 @@
 
 ## Run Cafe
 <pre>run_cafe.sh</pre>
-<p>The dates in the tree are derived from the Bayesian time tree</p>
+<p>The dates in the tree in the shell script run_cafe.sh are derived from the Bayesian time tree</p>
 
 ## Create summary files
 <pre>mkdir reports</pre>
@@ -36,6 +36,7 @@
 <summary>Molecular Function</summary>
 <pre>python scripts/hypergeometric_10LargestScaffolds.py orthogroupCountFile.cafe.filtered.tsv Orthogroups.tsv reports/summary_run1_fams.txt annotationFiles/hop.tsv annotationFiles/cannabis.tsv annotationFiles/mulberry.tsv annotationFiles/parasponia.tsv annotationFiles/peach.tsv annotationFiles/trema.tsv annotationFiles/vitis.tsv annotationFiles/ziziphus.tsv tenLargestScaffoldLengths.txt combinedGeneModels.txt uniprot-reviewed_yes+taxonomy_3193.allGOTerms.08242020.tab uniprot-reviewed_yes+taxonomy_3193.molecularFunction.08242020.tab molecularFunction</pre></details>
 
+<details><summary>Description of other files required for the hypergeometric script</summary>
 <p>Annotation files are generated for each species and contain both Pfam and UniProt similarity</p>
 <pre>geneID\thitSource\thitID\thitDescription\n</pre>
 <pre>HUMLU_CAS0073067.t1.p1  uniprotPlantNonRepeat   Q9FX89  sp|Q9FX89|FB50_ARATH Putative F-box protein At1g49610 OS=Arabidopsis thaliana OX=3702 GN=At1g49610 PE=4 SV=2</pre>
@@ -61,6 +62,7 @@ scaffoldID    originalGeneID    newGeneID    geneStart    geneStop    cdsStart  
 Scaffold_1531   MAKER0000005.t1 HUMLU_CAS0000005.t1.p1  43615   44430   43615   44430
 Scaffold_1531   MSTRG.1239.1.p1 HUMLU_CAS0000006.t1.p1  50767   52290   51380   52057
 </pre>
+</details>
 </details>
 
 </details>
