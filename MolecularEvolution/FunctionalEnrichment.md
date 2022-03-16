@@ -19,7 +19,7 @@ HUMLU_CAS0073067.t1.p1  pfamNonRepeat   PF00646.34      F-box domain</pre>
 </details>
 
 <details>
-<summary>Hemp vs hemp anchor gene pairs</summary>
+<summary>Hop vs hemp anchor gene pairs</summary>
 <pre>python hypergeometric_hop_vs_hemp.py hop_fullNonRepeatAssociatedGeneList.tsv hop_vs_cannabis.collinearity uniprot-reviewed_yes+taxonomy_3193.allGOTerms.08242020.tab uniprot-reviewed_yes+taxonomy_3193.biologicalProcesses.08242020.tab biologicalProcesses</pre>
 <pre>python hypergeometric_hop_vs_hemp.py hop_fullNonRepeatAssociatedGeneList.tsv hop_vs_cannabis.collinearity uniprot-reviewed_yes+taxonomy_3193.allGOTerms.08242020.tab uniprot-reviewed_yes+taxonomy_3193.cellularComponents.08242020.tab cellularComponent</pre>
 <pre>python hypergeometric_hop_vs_hemp.py hop_fullNonRepeatAssociatedGeneList.tsv hop_vs_cannabis.collinearity uniprot-reviewed_yes+taxonomy_3193.allGOTerms.08242020.tab uniprot-reviewed_yes+taxonomy_3193.molecularFunction.08242020.tab molecularFunction</pre>
