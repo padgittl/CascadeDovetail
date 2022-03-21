@@ -4,7 +4,9 @@
 <pre>hisat2</pre>
 <pre>StringTie v1.3.3b</pre>
 
-<details><summary>Assemble RNA-seq transcripts</summary>
+<details><summary>Assemble RNA-seq transcripts</summary>  
+
+
 ### Example hisat2 command
 <pre>hisat2 --rna-strandness FR --no-discordant --no-mixed --dta -x HISAT2_INDEXES/polishedMaskedAssembly.fastsa -1 cascadeRNASeq_R1.fastq -2 cascadeRNASeq_R2.fastq -S alignedRNASeq.sam</pre>
 
@@ -25,7 +27,9 @@
 <p>hopConeTranscriptAssemblies.txt contains list of transcript assemblies from leaf, meristem, stem, gland, and cone tissue from three developmental time points</p>
 </details>
 
-<details><summary>Create gene models with Transdecoder</summary>
+<details><summary>Create gene models with Transdecoder</summary>  
+
+
 ### Create transcripts.gff3
 <pre>TransDecoder-v5.5.0/util/gtf_to_alignment_gff3.pl stringtie_merged.gtf > transcripts.gff3</pre>
 
