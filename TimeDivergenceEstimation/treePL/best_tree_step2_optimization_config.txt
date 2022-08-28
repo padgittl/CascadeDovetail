@@ -1,0 +1,55 @@
+[Input file containing ML tree]
+treefile = RAxML_bestTree.fullCodon
+
+[General commands]
+numsites = 2576079
+nthreads = 8
+thorough
+
+# comment this out
+#[Priming command]
+#prime
+
+# results from previous priming run go here:
+[Cross-validation]
+randomcv
+opt = 1
+moredetail
+optad = 2
+moredetailad
+optcvad = 2
+moredetailcvad
+
+[Calibrations]
+# N5 is Humulus and Cannabis: 5-28 mya
+# N6 is Trema and Parasponia: No calibration
+# N4 is common ancestor to Hum/Can and Tre/Par: No calibration
+# N3 is Morus: 53-97 mya
+# N2 is Ziziphus: 79-117 mya
+# N1 is Prunus: 62-118 mya
+# N0 is Vitis: 107-135 mya
+
+mrca = N0 vitis_vinifera prunus_persica
+min = N0 107
+max = N0 135
+
+mrca = N1 prunus_persica ziziphus_jujuba
+min = N1 62
+max = N1 118
+
+mrca = N2 ziziphus_jujuba morus_notabilis
+min = N2 79
+max = N2 117
+
+mrca = N3 morus_notabilis cannabis_sativa
+min = N3 53
+max = N3 97
+
+mrca = N5 cannabis_sativa humulus_lupulus
+min = N5 5
+max = N5 28
+
+[Best smoothing value]
+
+[Output file of dating step]
+outfile = dated_best_tree.tre

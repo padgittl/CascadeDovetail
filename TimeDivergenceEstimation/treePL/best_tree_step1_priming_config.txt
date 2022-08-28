@@ -1,0 +1,47 @@
+[Input file containing ML tree]
+treefile = RAxML_bestTree.fullCodon
+
+[General commands]
+numsites = 2576079
+nthreads = 8
+thorough
+
+[Priming command]
+prime
+
+# [Cross-validation]
+
+[Calibrations]
+# N5 is Humulus and Cannabis: 5-28 mya
+# N6 is Trema and Parasponia: No calibration
+# N4 is common ancestor to Hum/Can and Tre/Par: No calibration
+# N3 is Morus: 53-97 mya
+# N2 is Ziziphus: 79-117 mya
+# N1 is Prunus: 62-118 mya
+# N0 is Vitis: 107-135 mya
+# fixage taxon=angio age=150;
+
+# Tree tree1=(vitis_vinifera:0.10841,(prunus_persica:0.15147,(ziziphus_jujuba:0.13690,(morus_notabilis:0.11766,((ca nnabis_sativa:0.05348,humulus_lupulus:0.03485)N5:0.07252,(trema_orientale:0.01145,parasponia_andersonii:0.02001)N6:0.05427)N4:0.04250)N3:0.05755)N2:0.03262)N1:0.10841)N0:0.00000;End;
+
+mrca = N0 vitis_vinifera prunus_persica
+min = N0 107
+max = N0 135
+
+mrca = N1 prunus_persica ziziphus_jujuba
+min = N1 62
+max = N1 118
+
+mrca = N2 ziziphus_jujuba morus_notabilis
+min = N2 79
+max = N2 117
+
+mrca = N3 morus_notabilis cannabis_sativa
+min = N3 53
+max = N3 97
+
+mrca = N5 cannabis_sativa humulus_lupulus
+min = N5 5
+max = N5 28
+
+[Best smoothing value]
+

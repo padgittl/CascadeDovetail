@@ -1,0 +1,43 @@
+#NEXUS
+Begin Taxa;
+ Dimensions NTax=8;
+ TaxLabels vitis_vinifera prunus_persica ziziphus_jujuba morus_notabilis cannabis_sativa humulus_lupulus trema_orientale parasponia_andersonii;
+End;
+Begin Trees;
+ Tree tree1=((((((cannabis_sativa:0.07279808043787533434,humulus_lupulus:0.03951364817456561734):0.09303436378845297838,(trema_orientale:0.01148512032905843125,parasponia_andersonii:0.01825997610085013795):0.06761241785378514779):0.05386716011359781592,morus_notabilis:0.16776560954471864129):0.07546316083223109095,ziziphus_jujuba:0.19183164782013148453):0.04212262112494244426,prunus_persica:0.21000298546479886919):0.17261763528559428971,vitis_vinifera:0.17261763528559428971);
+End;
+
+# N5 is Humulus and Cannabis: 5-28 mya
+# N6 is Trema and Parasponia: No calibration
+# N4 is common ancestor to Hum/Can and Tre/Par: No calibration
+# N3 is Morus: 53-97 mya
+# N2 is Ziziphus: 79-117 mya
+# N1 is Prunus: 62-118 mya
+# N0 is Vitis: 107-135 mya
+
+begin r8s;
+blformat lengths=persite nsites=2576079 ultrametric=no round=yes;
+
+fixage taxon=vitis_vinifera age=125;
+
+mrca N0 vitis_vinifera prunus_persica;
+constrain taxon=N0 min_age=107 max_age=135;
+
+mrca N1 prunus_persica ziziphus_jujuba
+constrain taxon=N1 min_age=62 max_age=118;
+
+mrca N2 ziziphus_jujuba morus_notabilis;
+constrain taxon=N2 min_age=79 max_age=117;
+
+mrca N3 morus_notabilis cannabis_sativa;
+constrain taxon=N3 min_age=53 max_age=97;
+
+mrca N5 cannabis_sativa humulus_lupulus;
+constrain taxon=N5 min_age=5 max_age=28;
+
+divtime method=pl algorithm=TN crossv=yes;
+showage shownamed=yes;
+set checkGradient=yes;
+
+describe plot=chrono_description
+end;
