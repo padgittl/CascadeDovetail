@@ -32,3 +32,9 @@ Orthogroups.tsv and Orthogroups_SingleCopyOrthologues.txt are generated from Ort
 <code>python scripts/concatenateFDTvPositions.py msaFileList.txt</code>
 
 <code>cat *fasta > allSpecies.thirdCodonPos.fa</code>
+
+## 5. (alternate approaches using r8s and treePL) Concatenate full codons and create 'partition.txt' file for RAxML
+
+<code>python scripts/concatenateFullCodons.py msaFileList.txt</code>
+
+<code>cat *fasta > allSpecies.thirdCodonPos.fa</code>
