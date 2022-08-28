@@ -42,4 +42,3 @@ Orthogroups.tsv and Orthogroups_SingleCopyOrthologues.txt are generated from Ort
 <code>cat *fasta > allSpecies.thirdCodonPos.fa</code>
 
 ### see 'partitions_example.txt' for an example of the format for the partitions file
-<code>partitions_example.txt</code>
