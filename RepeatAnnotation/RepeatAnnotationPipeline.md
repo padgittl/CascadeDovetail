@@ -45,7 +45,7 @@ Create masked fasta file (after this command, we refer to the combined fasta fil
 </details>
 
 
-### Analyze repeat results (this step was performed on individual scaffolds)
+### Analyze repeat results  
 
 <details>
 <summary>commands</summary>
