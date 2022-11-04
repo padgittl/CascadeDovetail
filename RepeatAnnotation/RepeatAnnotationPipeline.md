@@ -37,6 +37,10 @@ Repeat library:
 
 Combine RepeatMasker output files (if pipeline is performed on each scaffold separately)  
 <code>cat outputDir/*.gff > mipsRERepMaskDovetail.gff</code>
+</details>
+
+<details>
+<summary>commands</summary>
 
 ### Combine RepeatMasker and *de novo* results
 
@@ -48,7 +52,7 @@ Create masked fasta file (after this command, we refer to the combined fasta fil
 </details>
 
 
-### Analyze repeat results  
+### Prepare repeat results for further analysis and visualization   
 
 <details>
 <summary>commands</summary>
