@@ -39,10 +39,11 @@ Combine RepeatMasker output files (if pipeline is performed on each scaffold sep
 <code>cat outputDir/*.gff > mipsRERepMaskDovetail.gff</code>
 </details>
 
-<details>
-<summary>commands</summary>
 
 ### Combine RepeatMasker and *de novo* results
+
+<details>
+<summary>commands</summary>
 
 Create GFF file (after this command, we refer to the combined GFF file as combinedRepeats.gff, which is here denoted as outputFileName.gff, to signify that it is the output file of this script)  
 <code>python scripts/combineOutputGFF.py mipsRERepMaskDovetail.gff denovoLTRsDovetail.gff outputFileName.gff</code>
