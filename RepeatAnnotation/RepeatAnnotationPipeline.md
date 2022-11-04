@@ -4,7 +4,7 @@
 ### *de novo* identification of long terminal retrotransposons (LTRs)
 
 <details>
-<summary>*de novo* identification of long terminal retrotransposons (LTRs)</summary>
+<summary>commands</summary>
 
 gt suffixerator (GenomeTools) 1.6.1  
 <code>gt suffixerator -db scaffoldID.fasta -indexname scaffoldID -tis -suf -lcp -des -ssp -dna</code>
@@ -22,7 +22,12 @@ Combine LTR_retriever output files (if pipeline is performed on each scaffold se
 <code>cat *.out.gff > denovoLTRsDovetail.gff</code>
 </details>
 
-### Identification of non-LTR repeat sequences
+
+
+### Identification of non-LTR repeat sequences  
+
+<details>
+<summary>commands</summary>
 RepeatMasker version 4.1.0  
 Repeat library: [mipsREdat_9.3p_Eudicot_TEs.fasta](https://www.mmnt.net/db/0/0/ftp.mips.embnet.org/plants/REdat)  
 <code>RepeatMasker -lib mipsREdat_9.3p_Eudicot_TEs.fasta -qq -pa 4 -cutoff 225 -norna -a -gff -dir outputDir/ scaffoldID.fasta</code>  
@@ -37,8 +42,13 @@ Create GFF file (after this command, we refer to the combined GFF file as combin
 
 Create masked fasta file (after this command, we refer to the combined fasta file as combinedRepeats.fasta, which is here denoted as outputFileName.fasta, to signify that it is the output file of this script)  
 <code>bedtools maskfasta -fi assembly.fasta -bed combinedRepeats.gff -fo outputFileName.fasta</code>
+</details>
+
 
 ### Analyze repeat results (this step was performed on individual scaffolds)
+
+<details>
+<summary>commands</summary>
 
 Split GFF  
 <code>python scripts/splitGFF.py combinedRepeats.gff</code>
@@ -71,8 +81,13 @@ Calculate repeat percentages for whole assembly relative to total repeat content
 
 Calculate repeat percentages for whole assembly relative to assembly size (assembly size here is 3713677344 bp)    
 <code>python scripts/getRepeatPercentageFromSingleGFFs4StackedBarChart.py repeatCountFileList.txt 3713677344 > repeatPercentagesRelative2AssemblySize.txt</code>
+</details>
+
 
 ### Pie chart visualizations
+
+<details>
+<summary>commands</summary>
 
 Repeat percentages relative to total repeat content  
 <code>python scripts/createPieChart_relativeToTotalRepeatContent.py repeatPercentagesRelative2TotalRepeatContent.txt</code>
@@ -80,3 +95,4 @@ Repeat percentages relative to total repeat content
 Repeat percentages relatives to assembly size  
 <code>python scripts/createPieChart_relativetoAssemblySize.py repeatPercentagesRelative2AssemblySize.txt</code>
 
+</details>
