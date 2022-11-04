@@ -1,7 +1,6 @@
 # Pipeline for annotating repeats in the Cascade Hop Dovetail Assembly 
-## This pipeline can be run on each scaffold individually or on the whole assembly
 
-# Repeat Annotation
+
 ### *de novo* identification of long terminal retrotransposons (LTRs)
 gt suffixerator (GenomeTools) 1.6.1  
 <code>gt suffixerator -db scaffoldID.fasta -indexname scaffoldID -tis -suf -lcp -des -ssp -dna</code>
@@ -12,10 +11,10 @@ gt ltrharvest (GenomeTools) 1.6.1
 LTR_FINDER_parallel v1.1  
 <code>LTR_FINDER_parallel -seq ../index/scaffoldID.fasta -threads 4 -harvest_out</code>
 
-LTR_retriever v2.7
+LTR_retriever v2.7  
 <code>LTR_retriever -genome ../index/scaffoldID.fasta -inharvest ../ltrharvest/scaffoldID.ltrharvestScreen.out -infinder ../LTR_finder_parallel/scaffoldID.fasta.finder.combine.scn -threads 4 > scaffoldID.ltr_retriever.out</code>
 
-Combine LTR_retriever output files (if pipeline is performed on each scaffold separately)
+Combine LTR_retriever output files (if pipeline is performed on each scaffold separately)  
 <code>cat *.out.gff > denovoLTRsDovetail.gff</code>
 
 ### Identification of non-LTR repeat sequences
@@ -23,27 +22,27 @@ RepeatMasker version 4.1.0
 Repeat library: [mipsREdat_9.3p_Eudicot_TEs.fasta](https://www.mmnt.net/db/0/0/ftp.mips.embnet.org/plants/REdat)  
 <code>RepeatMasker -lib mipsREdat_9.3p_Eudicot_TEs.fasta -qq -pa 4 -cutoff 225 -norna -a -gff -dir outputDir/ scaffoldID.fasta</code>  
 
-Combine RepeatMasker output files (if pipeline is performed on each scaffold separately)
+Combine RepeatMasker output files (if pipeline is performed on each scaffold separately)  
 <code>cat outputDir/*.gff > mipsRERepMaskDovetail.gff</code>
 
 ### Combine RepeatMasker and *de novo* results
 
-Create GFF file (after this command, we refer to the combined GFF file as combinedRepeats.gff, which is here denoted as outputFileName.gff, to signify that it is the output file of this script)
+Create GFF file (after this command, we refer to the combined GFF file as combinedRepeats.gff, which is here denoted as outputFileName.gff, to signify that it is the output file of this script)  
 <code>python scripts/combineOutputGFF.py mipsRERepMaskDovetail.gff denovoLTRsDovetail.gff outputFileName.gff</code>
 
-Create masked fasta file (after this command, we refer to the combined fasta file as combinedRepeats.fasta, which is here denoted as outputFileName.fasta, to signify that it is the output file of this script)
+Create masked fasta file (after this command, we refer to the combined fasta file as combinedRepeats.fasta, which is here denoted as outputFileName.fasta, to signify that it is the output file of this script)  
 <code>bedtools maskfasta -fi assembly.fasta -bed combinedRepeats.gff -fo outputFileName.fasta</code>
 
 ### Analyze repeat results (this step was performed on individual scaffolds)
 
-Split GFF 
+Split GFF  
 <code>python scripts/splitGFF.py combinedRepeats.gff</code>
 
-Split fasta
+Split fasta  
 <code>python scripts/splitFasta.py 
 /nfs0/BB/Hendrix_Lab/Hops/DovetailAnalysis/RepeatIdentification/scripts/splitFasta.py ../combinedRepeatsDovetail.denovoLTRsOnly.singleScaffold.fasta</code>
 
-Calculate repeat percentages per scaffold
+Calculate repeat percentages per scaffold  
 <code>for f in Scaffold_*.gff; do echo python scripts/getRepeatPercentages.py $f polishedScaffoldLengths.txt '>' `basename $f gff`txt; done > getPerScaffoldRepeatContent.sh</code>
 
 <details>
@@ -60,20 +59,20 @@ Scaffold_49 290858211
 Scaffold_191 185200997</pre>
 </details>
 
-Create file list 
+Create file list  
 <code>ls -1 *txt > repeatCountFileList.txt</code>
 
-Calculate repeat percentages for whole assembly relative to total repeat content
+Calculate repeat percentages for whole assembly relative to total repeat content  
 <code>python scripts/getRepeatPercentageFromSingleGFFs4PieChart.py repeatCountFileList.txt > repeatPercentagesRelative2TotalRepeatContent.txt</code>
 
-Calculate repeat percentages for whole assembly relative to assembly size (assembly size here is 3713677344)
+Calculate repeat percentages for whole assembly relative to assembly size (assembly size here is 3713677344)  
 <code>python scripts/getRepeatPercentageFromSingleGFFs4StackedBarChart.py repeatCountFileList.txt 3713677344 > repeatPercentagesRelative2AssemblySize.txt</code>
 
 ### Pie chart visualizations
 
-Repeat percentages relative to total repeat content
+Repeat percentages relative to total repeat content  
 <code>python scripts/createPieChart_relativeToTotalRepeatContent.py repeatPercentagesRelative2TotalRepeatContent.txt</code>
 
-Repeat percentages relatives to assembly size
+Repeat percentages relatives to assembly size  
 <code>python scripts/createPieChart_relativetoAssemblySize.py repeatPercentagesRelative2AssemblySize.txt</code>
 
