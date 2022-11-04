@@ -31,7 +31,8 @@ Combine LTR_retriever output files (if pipeline is performed on each scaffold se
 RepeatMasker version 4.1.0  
 Repeat library:  
 [mipsREdat_9.3p_Eudicot_TEs.fasta]  
-(https://www.mmnt.net/db/0/0/ftp.mips.embnet.org/plants/REdat)  
+(https://www.mmnt.net/db/0/0/ftp.mips.embnet.org/plants/REdat)   
+
 <code>RepeatMasker -lib mipsREdat_9.3p_Eudicot_TEs.fasta -qq -pa 4 -cutoff 225 -norna -a -gff -dir outputDir/ scaffoldID.fasta</code>  
 
 Combine RepeatMasker output files (if pipeline is performed on each scaffold separately)  
