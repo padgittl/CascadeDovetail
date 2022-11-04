@@ -39,11 +39,10 @@ Split GFF
 <code>python scripts/splitGFF.py combinedRepeats.gff</code>
 
 Split fasta  
-<code>python scripts/splitFasta.py 
-/nfs0/BB/Hendrix_Lab/Hops/DovetailAnalysis/RepeatIdentification/scripts/splitFasta.py ../combinedRepeatsDovetail.denovoLTRsOnly.singleScaffold.fasta</code>
+<code>python scripts/splitFasta.py combinedRepeats.fasta</code>
 
 Calculate repeat percentages per scaffold  
-<code>for f in Scaffold_*.gff; do echo python scripts/getRepeatPercentages.py $f polishedScaffoldLengths.txt '>' `basename $f gff`txt; done > getPerScaffoldRepeatContent.sh</code>
+<code>for f in Scaffold_*.gff; do echo python scripts/getRepeatPercentages.py $f polishedScaffoldLengths.txt '>' \`basename $f gff\`txt; done > getPerScaffoldRepeatContent.sh</code>
 
 <details>
 <summary>polishedScaffoldLengths.txt format</summary>
@@ -65,7 +64,7 @@ Create file list
 Calculate repeat percentages for whole assembly relative to total repeat content  
 <code>python scripts/getRepeatPercentageFromSingleGFFs4PieChart.py repeatCountFileList.txt > repeatPercentagesRelative2TotalRepeatContent.txt</code>
 
-Calculate repeat percentages for whole assembly relative to assembly size (assembly size here is 3713677344)  
+Calculate repeat percentages for whole assembly relative to assembly size (assembly size here is 3713677344 bp)    
 <code>python scripts/getRepeatPercentageFromSingleGFFs4StackedBarChart.py repeatCountFileList.txt 3713677344 > repeatPercentagesRelative2AssemblySize.txt</code>
 
 ### Pie chart visualizations
