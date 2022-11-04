@@ -2,6 +2,10 @@
 
 
 ### *de novo* identification of long terminal retrotransposons (LTRs)
+
+<details>
+<summary>*de novo* identification of long terminal retrotransposons (LTRs)</summary>
+
 gt suffixerator (GenomeTools) 1.6.1  
 <code>gt suffixerator -db scaffoldID.fasta -indexname scaffoldID -tis -suf -lcp -des -ssp -dna</code>
 
@@ -11,11 +15,12 @@ gt ltrharvest (GenomeTools) 1.6.1
 LTR_FINDER_parallel v1.1  
 <code>LTR_FINDER_parallel -seq ../index/scaffoldID.fasta -threads 4 -harvest_out</code>
 
-LTR_retriever v2.7  
+LTR_retriever v2.7 (wherever the index files are located will be the location where the LTR_retriever output files are generated!!)    
 <code>LTR_retriever -genome ../index/scaffoldID.fasta -inharvest ../ltrharvest/scaffoldID.ltrharvestScreen.out -infinder ../LTR_finder_parallel/scaffoldID.fasta.finder.combine.scn -threads 4 > scaffoldID.ltr_retriever.out</code>
 
 Combine LTR_retriever output files (if pipeline is performed on each scaffold separately)  
 <code>cat *.out.gff > denovoLTRsDovetail.gff</code>
+</details>
 
 ### Identification of non-LTR repeat sequences
 RepeatMasker version 4.1.0  
